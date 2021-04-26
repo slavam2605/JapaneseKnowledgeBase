@@ -1,0 +1,15 @@
+.flexRow {
+    display: flex;
+}
+
+.flexColumn2 {
+    flex: 50%;
+}
+
+.big_kanji {
+    font-size: 3em;
+}
+
+.reading {
+    border-bottom: black 1px;
+}

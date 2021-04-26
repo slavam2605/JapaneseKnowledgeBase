@@ -1,0 +1,25 @@
+#	Kana	Kanji	Type	Definition/s
+1	どうも		adv,int	thanks, very
+2	まっすぐ		na-adj,adv,n	straight (ahead), direct
+3	あす	明日	n-t	tomorrow
+4	おかげ		n	thanks or owing to
+5	おじょうさん	お嬢さん	n	(1) (hon) daughter, (2) young lady
+6	おつり		n	change (money), balance
+7	かっこう		no--adj, na-adj	appearance, manner
+8	かまう		u-v	to mind, to care about
+9	かんごふ	看護婦	n	(female) nurse
+10	きっと		adv,n	surely, definitely
+11	～けん	～軒		counter for houses
+12	ごちそう		n,vs	feast, treating (someone)
+13	しっかり		adj-na,adv,n	firmly, tightly, steady
+14	すっかり		adv	all, completely, thoroughly
+15	すり		n	pickpocket
+16	そろそろ		n	gradually, steadily, soon
+17	～だて	建て	n	two storied, separate housing
+18	ちっとも		adv	not at all (neg. verb)
+19	とうとう			finally, at last
+20	とこや		n	barber
+21	なるべく		adv	as much as possible
+22	ひげ		n	beard
+23	ぶどう		n	grapes
+24	やはり/やっぱり		adv,exp	as I thought, absolutely

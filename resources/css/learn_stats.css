@@ -1,0 +1,23 @@
+.progress-bar-container {
+    --progress-bar-height: 30px;
+    width: 100%;
+    height: var(--progress-bar-height);
+    background: lightgrey;
+}
+
+.progress-bar-bar {
+    height: var(--progress-bar-height);
+    line-height: var(--progress-bar-height);
+    background: yellowgreen;
+    font-size: 80%;
+    text-align: center;
+}
+
+.stat-card {
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}

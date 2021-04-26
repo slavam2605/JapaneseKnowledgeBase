@@ -1,0 +1,33 @@
+a.index_kanji {
+    font-size: 2em;
+    text-decoration: none;
+    margin: 0.5em;
+    line-height: 1.5em;
+    color: blue;
+}
+
+a.index_kanji:hover {
+    color: red;
+}
+
+.highlight {
+    background: rgb(255, 240, 200);
+}
+
+.hot_highlight {
+    background: #ffc1c1;
+}
+
+.notLearned {
+    background: #b7ebff;
+}
+
+.toLearn {
+    background: #edffdf;
+}
+
+.section_separator {
+    margin-bottom: 20px;
+    color: gray;
+    border-bottom: 1px solid lightgray;
+}

@@ -1,0 +1,8 @@
+body {
+    text-align: justify;
+}
+
+.reading_entry {
+    padding: 10px;
+    display: inline-block;
+}

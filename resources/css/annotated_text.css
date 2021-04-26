@@ -1,0 +1,35 @@
+.unknown-word-token {
+    border-bottom: 1px red dashed;
+}
+
+.word-token {
+    border-bottom: 1px yellowgreen solid;
+}
+
+.word-token:hover {
+    background: lightgray;
+}
+
+.hiragana-token {
+
+}
+
+table.dictionary-entry > tbody > tr > td {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+table.word-card-head {
+    width: 100%;
+}
+
+td.word-title {
+    font-size: 150%;
+}
+
+td.tags-block {
+    text-align: right;
+    vertical-align: top;
+    padding-left: 50px;
+    color: gray;
+}
