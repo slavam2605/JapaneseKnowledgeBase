@@ -1,0 +1,25 @@
+a.kanjiMapItem {
+    margin: 4px;
+    color: black;
+    text-decoration: none;
+}
+
+a.kanjiMapItem.learnedItem {
+    background-color: rgb(200, 255, 200);
+}
+
+a.kanjiMapItem.inWordsItem {
+    background-color: rgb(238, 207, 255);
+}
+
+a.kanjiMapItem:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+a.kanjiMapItem.learnedItem:hover {
+    background-color: rgb(176, 234, 176);
+}
+
+a.kanjiMapItem.inWordsItem:hover {
+    background-color: rgb(218, 189, 235);
+}

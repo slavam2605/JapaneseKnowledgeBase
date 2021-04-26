@@ -1,0 +1,45 @@
+body {
+    font-size: 150%;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        font-size: 350%;
+    }
+}
+
+.writing_test_entry {
+    /*border: 1px solid black;*/
+    display: inline-block;
+    padding: 10px;
+}
+
+.furigana_block {
+    display: inline-block;
+}
+
+.furigana_entry {
+    font-size: 50%;
+    text-align: center;
+    /*margin: -10px;*/
+}
+
+.kanji_box {
+    text-align: center;
+    height: 1.5em;
+    width: 1.5em;
+    display: inline-block;
+    border: 1px solid black;
+    position: relative;
+    /*bottom: -10px;*/
+}
+
+.hiragana_box {
+    font-size: 1.1em;
+}
+
+.test_entry_meaning {
+    padding-left: 10px;
+    font-size: 80%;
+}

@@ -1,0 +1,51 @@
+body {
+    font-size: 200%;
+}
+
+.word_entry {
+    margin-left: 1em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.word-grammar-info {
+    font-size: 50%;
+    color: rgb(120, 120, 120);
+}
+
+.jlpt-n5-label {
+    background: lightgreen;
+}
+
+.jlpt-n4-label {
+    background: #e2fa23;
+}
+
+.jlpt-n3-label {
+    background: #ffdf1a;
+}
+
+.jlpt-n2-label {
+    background: orange;
+}
+
+.jlpt-n1-label {
+    background: #ff5252;
+}
+
+.collapsible {
+    background-color: #eee;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.collapsible.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.content {
+    display: none;
+    overflow: hidden;
+    padding-left: 50px;
+}

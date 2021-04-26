@@ -1,0 +1,1421 @@
+#	Kana	Kanji	Type	Definition/s
+0	ああ		int	Ah!, Oh!
+1	あう	会う	u-v	to meet, to see
+2	あお	青	n	blue
+3	あおい	青い	adj	blue
+4	あか	赤	n	red
+5	あかい	赤い	adj	red
+6	あかるい	明るい	adj	bright, cheerful
+7	あき	秋	n-adv	autumn, fall
+8	あく	開く	u-v,vi	to open, to become open
+9	あける	開ける	ru-v	to open
+10	あげる	上げる	ru-v	to give
+11	あさ	朝	n-adv,n-t	morning
+12	あさごはん	朝御飯	n	breakfast
+13	あさって		n-adv,n-t	day after tomorrow
+14	あし	足	n	foot, leg
+15	あした		n-t	tomorrow
+16	あそこ		n	there, over there, that place
+17	あそぶ	遊ぶ	u-v	to play, to enjoy oneself
+18	あたたかい	暖かい	adj	warm, mild
+19	あたま	頭	n	head
+20	あたらしい	新しい	adj	new
+21	あちら		n	there, yonder, that
+22	あつい	暑い	adj	hot, warm
+23	あつい	熱い	adj	hot (thing)
+24	あつい	厚い	adj	kind, warm(hearted), thick, deep
+25	あっち		n col	over there
+26	あと	後	adj-no,n	afterwards, since then, in the future
+27	あなた		n	you
+28	あに	兄	n	(hum) older brother
+29	あね	姉	n	(hum) older sister
+30	あの		pren-adj	that over there
+31	あの		int	um...
+32	アパート		n,adv	apartment (abbr)
+33	あびる		ru-v	to bathe, to shower
+34	あぶない	危ない	adj	dangerous, critical, watch out!
+35	あまい	甘い	adj,expr	generous, sweet
+36	あまり		na-adj,adv,n,n-suf	not very, not much
+37	あめ	雨	n	rain
+38	あめ	飴	n	(hard) candy, toffee
+39	あらう	洗う	u-v	to wash
+40	ある [存在]		u-v-i	to be
+41	ある [所有]		u-v-i	to have
+42	あるく	歩く	u-v	to walk
+43	あれ		int,n	that, that thing
+44	いい/よい		adj	good
+45	いいえ		int,n	no, not at all
+46	いう	言う	u-v	to say
+47	いえ	家	suf	house, family
+48	いかが		na-adj,adv,n	how, in what way
+49	いく/ゆく	行く	u-v	to go
+50	いくつ		n	how many?, how old?
+51	いくら		adv,n	how much?, how many?
+52	いけ	池	n	pond
+53	いしゃ	医者	n	doctor (medical)
+54	いす		n	chair
+55	いそがしい	忙しい	adj	busy, irritated
+56	いたい	痛い	adj	painful
+57	いち	一	num	one
+58	いちにち	一日	n	1 day (duration)
+59	いちばん		n-adv	best, first, number one
+60	いつ		gn-adv	when
+61	いつか	五日	n	five days, the fifth day (of the month)
+62	いっしょ	一緒	adv,n	together
+63	いつつ	五つ	n	five
+64	いつも		adv,n	always, every time
+65	いぬ	犬		dog
+66	いま	今		now
+67	いみ	意味	n,vs	meaning
+68	いもうと	妹	n	younger sister
+69	いや	嫌	na-adj,n	disagreeable, no
+70	いりぐち	入口	n	entrance, gate
+71	いる	居る	u-v	(hum) to be (animate), to exist
+72	いる	要る	u-v	to need
+73	いれる	入れる	ru-v	to put in
+74	いろ	色	n	colour
+75	いろいろ		na-adj,adj-no,adv,n	various
+76	うえ	上	no-adj,n-adv,n,n-suf	above, on top of
+77	うしろ	後ろ	n	behind, rear
+78	うすい	薄い	adj	thin, weak
+79	うた	歌	n	song
+80	うたう	歌う	u-v	to sing
+81	うち		n	house (one's own)
+82	うまれる	生まれる	ru-v	to be born
+83	うみ	海	n	sea, beach
+84	うる	売る	u-v	to sell
+85	うるさい		adj	noisy, loud, annoying
+86	うわぎ	上着	n	coat, jacket
+87	え	絵	n,n-suf	picture, drawing, painting, sketch
+88	えいが	映画	n	movie, film
+89	えいがかん	映画館	n	movie theatre (theater), cinema
+90	えいご	英語	n	the English language
+91	ええ		conj,int,n	yes
+92	えき	駅	n	station
+93	エレベーター		n	elevator
+94	～えん	～円	n	yen (currency)
+95	えんぴつ	鉛筆	n	pencil
+96	お～		prefix	honourable ～ (honorific)
+97	おいしい		adj	delicious, tasty
+98	おおい	多い	adj	many
+99	おおきい	大きい	adj	big
+100	おおきな	大きな	na-adj	big
+101	おおぜい	大勢	n	great number of people
+102	おかあさん	お母さん	n	(hon) mother
+103	おかし	お菓子	n	confections, sweets, candy
+104	おかね	お金	n	money
+105	おきる	起きる	ru-v	to get up, to rise
+106	おく	置く	u-v	to put, to place
+107	おくさん	奥さん	n	(hon) wife
+108	おさけ	お酒	n	alcohol, sake (rice wine)
+109	おさら	お皿	n	plate, dish
+110	おじ・さん	伯父/叔父・さん	n	uncle, middle aged man
+111	おじいさん		n	grandfather, male senior citizen
+112	おしえる	教える	ru-v	to teach, to inform
+113	おす	押す	u-v,vt	to push, to press
+114	おそい	遅い	adj	late, slow
+115	おちゃ	お茶	n	tea (green)
+116	おてあらい	お手洗い		toilet, lavatory, bathroom
+117	おとうさん	お父さん	n	(hon) father
+118	おとうと	弟	n	younger brother
+119	おとこ	男	n	man
+120	おとこのこ	男の子	n	boy
+121	おととい		n-adv,n-t	day before yesterday
+122	おととし		n-adv,n-t	year before last
+123	おとな	大人	n	adult
+124	おなか		n	stomach
+125	おなじ	同じ	na-adj,n	same, identical, similar
+126	おにいさん	お兄さん	n	(hon) older brother
+127	おねえさん	お姉さん	n	(hon) older sister
+128	おばさん	伯母さん/叔母さん	n	aunt
+129	おばあさん		n	grandmother, female senior-citizen
+130	おふろ	お風呂	n	bath
+131	おべんとう	お弁当	n	boxed lunch
+132	おぼえる	覚える	ru-v	to remember, to memorize
+133	おまわりさん		n	policeman (friendly term)
+134	おもい	重い	adj	heavy
+135	おもしろい		adj	interesting, amusing
+136	およぐ	泳ぐ	u-v	to swim
+137	おりる	降りる	ru-v	to alight (eg from bus), to get off
+138	おわる	終る	u-v	to finish, to close
+139	おんがく	音楽	n	music
+140	おんな	女	n	woman, girl, daughter
+141	おんなのこ	女の子	n	girl
+142	～かい	～回	n	counter for occurrences
+143	～かい	～階	n	counter for storeys of a building
+144	がいこく	外国	n	foreign country
+145	がいこくじん	外国人	n	foreigner
+146	かいしゃ	会社	n	company, corporation
+147	かいだん	階段	n	stairs
+148	かいもの	買い物	n	shopping
+149	かう	買う	u-v	to buy
+150	かえす	返す	u-v,vt	to return something
+151	かえる	帰る	u-v	to go home, to return
+152	かお	顔	n	face (person)
+153	かかる		u-v,vi	to take (eg time, money)
+154	かぎ		n	key/s
+155	かく	書く	u-v	to write
+156	がくせい	学生	n	student
+157	～かげつ	～か月	suf	(number of) months
+158	かける		ru-v	to put on (eg glasses)
+159	かける		ru-v	to dial/call (eg phone)
+160	かさ	傘	n	umbrella
+161	かす	貸す	u-v	to lend
+162	かぜ	風	n	wind, breeze
+163	かぜ	風邪	n	cold, illness
+164	かた	方	n	person
+165	かぞく	家族	n	family
+166	かたかな	片仮名	n	katakana
+167	～がつ	～月	suf	month of year
+168	がっこう	学校	n	school
+169	カップ		n	cup
+170	かてい	家庭	n	home, household
+171	かど	角	n	corner (e.g. desk)
+172	かばん		n	bag, basket
+173	かびん	花瓶	n	(flower) vase
+174	かぶる		u-v	to wear, to put on (head)
+175	かみ	紙	n	paper
+176	カメラ		n	camera
+177	かようび	火曜日	n-adv,n	Tuesday
+178	からい	辛い	adj	spicy, salty
+179	からだ	体	n	body
+180	かりる	借りる	ru-v	to borrow, to have a loan
+181	～がる		suf	feel
+182	かるい	軽い	adj	light, non-serious, minor
+183	カレー		n	curry
+184	カレンダー		n	calendar
+185	かわ	川/河	n	river
+186	～がわ	側	n-suf	～ side
+187	かわいい		adj	cute, charming
+188	かんじ	漢字	n	kanji, Chinese character
+189	き	木	n	tree, wood
+190	きいろ	黄色	n	yellow
+191	きいろい	黄色い	adj	yellow
+192	きえる	消える	ru-v	to go out, to vanish
+193	きく	聞く	u-v	to hear, to listen, to ask
+194	きた	北		north
+195	ギター		n	guitar
+196	きたない	汚い	adj	dirty, messy
+197	きっさてん	喫茶店	n	coffee lounge
+198	きって	切手	n	stamp (eg. postage)
+199	きっぷ	切符	n	ticket
+200	きのう	昨日	n-adv,n-t	yesterday
+201	きゅう	九	num	nine
+202	ぎゅうにく	牛肉	n	beef
+203	ぎゅうにゅう	牛乳	n	milk
+204	きょう	今日	n-t	today, this day
+205	きょうしつ	教室	n	classroom
+206	きょうだい	兄弟	n	siblings (brothers and sisters)
+207	きょねん	去年	n-adv,n-t	last year
+208	きらい	嫌い	na-adj,n	dislike, hate
+209	きる	切る	suf,u-v	to cut, to chop
+210	きる	着る	ru-v	to wear, to put on (from shoulders down)
+211	きれい		na-adj	pretty, clean, nice, tidy
+212	キロ/キログラム		n,pref	kilo (kilogram)
+213	キロ/キロメートル		n,pref	kilo (kilometre)
+214	ぎんこう	銀行	n	bank
+215	きんようび	金曜日	n-adv,n	Friday
+216	く	九	number	nine
+217	くすり	薬	n	medicine
+218	ください		kana only	(with te-form verb) please do for me
+219	くだもの	果物	n	fruit
+220	くち	口	n	mouth, orifice, opening
+221	くつ	靴	n	shoes, footwear
+222	くつした	靴下	n	socks
+223	くに	国	n	country
+224	くもり	曇り	adv	cloudiness, cloudy weather
+225	くもる	曇る	u-v	to become cloudy, to become dim
+226	くらい	暗い	adj	dark, gloomy
+227	～くらい/ぐらい		suf	approximate (quantity)
+228	クラス		n	class
+229	グラム		n	gram
+230	くる	来る	vk	to come
+231	くるま	車	n	car, vehicle
+232	くろ	黒	n	black
+233	くろい	黒い	adj	black
+234	けいかん	警官	n	policeman
+235	けさ	今朝	n-temp	this morning
+236	けす	消す	u-v	to erase, to delete, to turn off power
+237	けっこう	結構	na-adj,n-adv,n	nice, enough
+238	けっこん（する）	結婚	adj-no,n,vs	marriage
+239	げつようび	月曜日	n-adv,n	Monday
+240	げんかん	玄関	n	entrance-way, entry hall
+241	げんき	元気	na-adj,n	health
+242	～こ	～個	n,suf	counter for small items
+243	ご	五	num	five
+244	～ご	～語	n,n-suf	word, language
+245	こうえん	公園	n	(public) park
+246	こうさてん	交差点	n	intersection
+247	こうちゃ	紅茶	n	black tea
+248	こうばん	交番	n	police box
+249	こえ	声	n	voice
+250	コート		n	coat
+251	コーヒー		n	coffee
+252	ここ		n	here, this place
+253	ごご	午後	n-adv,n-t	afternoon, P.M.
+254	ここのか	九日		nine days, the ninth day (of the month)
+255	ここのつ	九つ	n	nine
+256	ごぜん	午前	n-adv,n-t	morning, A.M.
+257	こたえる	答える	ru-v	to answer, to reply
+258	こちら		n	this eg person, way
+259	こっち		n	this eg person, way
+260	コップ		n	cup
+261	ことし	今年	n-adv,n-t	this year
+262	ことば	言葉	n	word
+263	こども	子供	n	child, children
+264	この		adj-pn,int	this
+265	ごはん	御飯	n	rice (cooked), meal
+266	コピー・する		n,p-suru	to copy
+267	こまる	困る	u-v	to be worried, to be bothered
+268	これ		int,n	this
+269	～ころ/～ごろ		n-suf	about, approximately (time)
+270	こんげつ	今月	n-adv,n-t	this month
+271	こんしゅう	今週	n-adv,n-t	this week
+272	こんな		na-adj,adj-pn,adv,n	such, like this
+273	こんばん	今晩	n-adv,n-t	tonight, this evening
+274	さあ		conj,int	come now, well
+275	～さい	～歳	suf	～years-old
+276	さいふ	財布	n	wallet
+277	さかな	魚	n	fish
+278	さき	先	adj-no,n,n-suf,pref	the future, former, previous
+279	さく	咲く	u-v	to bloom
+280	さくぶん	作文	n	composition, writing
+281	さす	差す	u-v	to raise (stretch out) hands, to raise (eg umbrella)
+282	～さつ	～冊	n	counter for books
+283	ざっし	雑誌	n	magazine
+284	さとう	砂糖	n	sugar
+285	さむい	寒い	adj	cold (e.g. weather)
+286	さらいねん	さ来年	n-adv,n-t	year after next
+287	～さん		suf	Mr or Mrs
+288	さん	三	num	three
+289	さんぽ（する）	散歩	n,vs	walk, stroll
+290	し	四	num	four
+291	～じ	～時	suf	time (～ O'clock)
+292	しお	塩	n	salt
+293	しかし		conj	however, but
+294	じかん	時間	n-adv,n	time
+295	～じかん	～時間	suf	～hours
+296	しごと	仕事	adj-no,n	work, occupation, employment
+297	じしょ	辞書	n	dictionary
+298	しずか	静か	na-adj	quiet, peaceful
+299	した	下	n	under, below, beneath
+300	しち	七	num	seven
+301	しつもん	質問	n,vs	question, inquiry
+302	じてんしゃ	自転車	n	bicycle
+303	じどうしゃ	自動車	n	automobile
+304	しぬ	死ぬ	v5n	to die
+305	じびき	字引	n	dictionary
+306	じぶん	自分	n	myself, oneself
+307	しまる	閉まる	u-v,vi	to close, to be closed
+308	しめる	閉める	ru-v,vt	to close, to shut
+309	しめる	締める	ru-v	to tie, to fasten
+310	じゃ/じゃあ		conj,int	well, well then
+311	しゃしん	写真	n	photograph
+312	シャツ		n	shirt, singlet
+313	シャワー		n	shower
+314	じゅう	十	num	ten
+315	～じゅう	～中	suf	during, while
+316	～しゅうかん	～週間	suf	～weeks
+317	じゅぎょう	授業	n,vs	lesson, class work
+318	しゅくだい	宿題	n	homework
+319	じょうず	上手	na-adj,n	skill, skillful, dexterity
+320	じょうぶ	丈夫	na-adj,n	strong, solid, durable
+321	しょうゆ		n	soy sauce
+322	しょくどう	食堂	n	cafeteria, dining hall
+323	しる	知る	u-v	to know, to understand
+324	しろ	白	n	white
+325	しろい	白い	adj	white
+326	～にん	～人	n,suf	counter for people
+327	しんぶん	新聞	n	newspaper
+328	すいようび	水曜日	n-adv,n	Wednesday
+329	すう	吸う	u-v	to smoke, to breathe in, to suck
+330	スカート		n	skirt
+331	すき	好き	na-adj,n	liking, fondness, love
+332	～すぎ		suf	to exceed, ～ too much
+333	すくない	少ない	adj	a few, scarce
+334	すぐ・に		adv	immediately, instantly
+335	すこし	少し	adv,n	little, few
+336	すずしい	涼しい	adj	cool, refreshing
+337	～ずつ		suf	at a time, gradually
+338	ストーブ		n	heater (lit: stove)
+339	スプーン		n	spoon
+340	スポーツ		n	sport
+341	ズボン		n	trousers (fr: jupon)
+342	すむ	住む	u-v	to reside, to live in
+343	スリッパ		n	slippers
+344	する		vs-i	to do, to try
+345	すわる	座る	u-v	to sit
+346	せい	背	n	height, stature
+347	せいと	生徒	n	pupil
+348	セーター		n	sweater, jumper
+349	せっけん	石鹸	n	soap
+350	せびろ	背広	n	business suit
+351	せまい	狭い	adj	narrow, confined, small
+352	ゼロ		n	zero
+353	せん	千		thousand, many
+354	せんげつ	先月	n-adv,n-t	last month
+355	せんしゅう	先週	n-adv,n-t	last week, the week before
+356	せんせい	先生	n	teacher, master, doctor
+357	せんたく	洗濯	n,vs	washing, laundry
+358	ぜんぶ	全部	n-adv,n-t	all, entire, whole
+359	そう/そうです			appears, to be the case
+360	そうじ（する）	掃除	n,vs	cleaning, sweeping
+361	そうして/そして		conj	and, like that
+362	そこ		n	that place, there
+363	そちら		n	over there
+364	そっち		n	over there
+365	そと	外	n	outside, exterior
+366	その		adj-pn	that
+367	そば		n	near, close, beside
+368	そら	空	n	sky
+369	それ		n	it, that
+370	それから		uk	and then, after that
+371	それでは		exp	in that situation, well then...
+372	～だい	～台	suf	counter for vehicles/machines
+373	だいがく	大学	n	university
+374	たいしかん	大使館	n	embassy
+375	だいじょうぶ	大丈夫	na-adj,adv,n	safe, all right, O.K.
+376	だいすき	大好き	na-adj,n	very likeable, like very much
+377	たいせつ	大切	na-adj,n	important
+378	だいどころ	台所	n	kitchen
+379	たいへん		na-adj,adv,n	very
+380	たいへん		na-adj,adv,n	difficult situation, tough situation
+381	たかい	高い	adj	tall, high
+382	たかい	高い	adj	expensive
+383	～だけ		prt	only ～, just ～
+384	たくさん		na-adj,adv,n	many, a lot, much
+385	タクシー		n	taxi
+386	だす	出す	u-v	to put out, to send
+387	～たち		n-suf	plural suffix
+388	たつ	立つ	u-v	to stand
+389	たて		n	length, height
+390	たてもの	建物	n	building
+391	たのしい	楽しい	adj	enjoyable, fun
+392	たのむ	頼む	u-v	to request, to ask
+393	たばこ		n	tobacco, cigarettes
+394	たぶん		adv,n	perhaps, probably
+395	たべもの	食べ物	n	food
+396	たべる	食べる	ru-v	to eat
+397	たまご	卵	n	egg(s)
+398	だれ	誰	n	who
+399	だれか	誰か	n	someone, somebody
+400	たんじょうび	誕生日	n	birthday
+401	だんだん		adv,n	gradually, by degrees
+402	ちいさい	小さい	adj	small, little
+403	ちいさな	小さな	na-adj	small, little
+404	ちかい	近い	adj,suf	near, close by, short
+405	ちがう	違う	u-v	to differ (from)
+406	ちかく	近く	n-adv,n	near
+407	ちかてつ	地下鉄	n	underground train, subway
+408	ちず	地図	n	map
+409	ちち	父	n	(one's own) father
+410	ちゃいろ	茶色	n	brown
+411	ちゃわん		n	rice bowl
+412	～ちゅう	～中	suf	during, while ～ing
+413	ちょうど		gn	just, right, exactly
+414	ちょっと		adv,int	a little, somewhat
+415	ついたち	一日	n	for one day, first of month
+416	つかう	使う	u-v	to use
+417	つかれる	疲れる	ru-v	to get tired, to tire
+418	つぎ	次	n	next
+419	つく	着く	u-v	to arrive at, to reach
+420	つくえ	机	n	desk
+421	つくる	作る	u-v	to make, to create
+422	つける		ru-v,vt	to turn on (eg a light)
+423	つとめる	勤める	ru-v	to serve, to work (for)
+424	つまらない		adj	insignificant, boring
+425	つめたい	冷たい	adj	cold (to the touch)
+426	つよい	強い	adj	strong, powerful
+427	て	手	n	hand
+428	テープ		n	tape
+429	テープレコーダー		n	tape recorder
+430	テーブル		n	table
+431	でかける	出かける	ru-v	to depart, to go out
+432	てがみ	手紙	n	letter
+433	できる		ru-v	to be able to
+434	でぐち	出口	n	exit
+435	テスト		n,vs	test
+436	では		expr	with that...
+437	デパート		n	department store
+438	でも		conj,prt	but, however
+439	でる	出る	ru-v	to appear, to leave
+440	テレビ		n	television, TV
+441	てんき	天気	n	weather
+442	でんき	電気	n	electricity, (electric) light
+443	でんしゃ	電車	n	electric train
+444	でんわ	電話	n,vs	telephone
+445	と	戸	n	door (Japanese style)
+446	～ど	～度	n-suf	counter for occurrences
+447	ドア		n	door (Western style)
+448	トイレ		n	toilet
+449	どう		adv	how, in what way
+450	どうして		adv,int	why?, for what reason
+451	どうぞ		adv	please, kindly, by all means
+452	どうぶつ	動物	n	animal
+453	どうも		adv,int	thanks, very
+454	とお	十	num	ten
+455	とおい	遠い	adj	far, distant
+456	とおか	十日		ten days, the tenth (day of the month)
+457	～とき	～時	adv,n	at the time of ～
+458	ときどき	時々	adv,n	sometimes
+459	とけい	時計	n	watch, clock
+460	どこ		n	where, what place
+461	ところ	所	n	place
+462	とし	年	n	year, age
+463	としょかん	図書館	n	library
+464	どちら		n	which, which way
+465	どっち		n	which one, which way
+466	とても		adv	very
+467	どなた		n	who
+468	となり	隣	n	next to, next door to
+469	どの		pren-adj	which
+470	とぶ	飛ぶ	u-v	to fly, to hop
+471	とまる	止まる	u-v	to come to a halt
+472	ともだち	友達	n	friend
+473	どようび	土曜日	n-adv,n	Saturday
+474	とり	鳥	n	bird
+475	とりにく	とり肉	n	chicken meat
+476	とる	取る	u-v	to take
+477	とる	撮る	u-v	to take (a photo)
+478	どれ		n	which (of three or more)
+479	どんな		na-adj,adj-pn,n	what, what kind of
+480	ない		adj	there isn't, doesn't have
+481	ナイフ		n	knife
+482	なか	中	n	inside, middle, among
+483	ながい	長い	adj	long
+484	～ながら		prt	while ~ing, during, although
+485	なく	鳴く	u-v	to sing (bird), to make sound (animal)
+486	なくす	無くす	u-v	to lose something
+487	なぜ		adv	why
+488	なつ	夏	n-adv,n-t	summer
+489	なつやすみ	夏休み	n	summer vacation, summer holiday
+490	～など		n,n-suf,prt	et cetera
+491	ななつ	七つ	n	seven
+492	なん/なに	何	int,n	what
+493	なのか	七日	n-adv	seven days, the seventh day (of the month)
+494	なまえ	名前	n	name
+495	ならう	習う	u-v	to learn
+496	ならぶ	並ぶ	u-v,vi	to line up, to stand in a line
+497	ならべる	並べる	ru-v,vt	to line up, to set up
+498	なる		u-v	to become
+499	なん～	何～		what sort of ～
+500	に	二	num	two
+501	にぎやか		na-adj,n	bustling, busy
+502	にく	肉	n	meat
+503	にし	西	n	west
+504	～にち	～日		～ day of the month, for ～ days
+505	にちようび	日曜日	n-adv,n	Sunday
+506	にもつ	荷物	n	luggage
+507	ニュース		n	news
+508	にわ	庭	n	garden
+509	～にん	～人		counter for people
+510	ぬぐ	脱ぐ	u-v	to take off clothes
+511	ぬるい	温い	adj	lukewarm
+512	ネクタイ		n	tie, necktie
+513	ねこ	猫	n	cat
+514	ねる	寝る	ru-v	to go to bed, to sleep
+515	～ねん	～年		～ years
+516	ノート		n	notebook, exercise book
+517	のぼる	登る	u-v	to climb
+518	のみもの	飲み物	n	drink, beverage
+519	のむ	飲む	u-v	to drink
+520	のる	乗る	u-v	to get on, to ride in, to board
+521	は	歯	n	tooth
+522	パーティー		n	party
+523	はい		conj,int	yes
+524	～はい	～杯	n	counter for cupfuls
+525	はいざら	灰皿	n	ashtray
+526	はいる	入る	u-v	to enter, to contain, to hold
+527	はがき	葉書	n	postcard
+528	はく		u-v	to wear, to put on (trousers)
+529	はこ	箱	n	box
+530	はし	橋	n	bridge
+531	はし		n	chopsticks
+532	はじまる	始まる	u-v,vi	to begin
+533	はじめ	初め/始め	expr	beginning, start
+534	はじめて	初めて	adv,n	for the first time
+535	はしる	走る	u-v	to run
+536	バス		n	bus
+537	バター		n	butter
+538	はたち	二十歳	n	20 years old, 20th year
+539	はたらく	働く	u-v	to work
+540	はち	八	num	eight
+541	はつか	二十日	n	twenty days, twentieth (day of the month)
+542	はな	花	n	flower
+543	はな	鼻	n	nose
+544	はなし	話	n	talk, story
+545	はなす	話す	u-v	to speak
+546	はは	母	n	(one's own) mother
+547	はやい	早い	adj	early
+548	はやい	速い	adj	quick, fast
+549	はる	春	n-adv,n-t	spring
+550	はる	貼る	u-v	to stick, to paste
+551	はれ	晴れ	ru-v	clear weather
+552	はれる	晴れる	ru-v	to be sunny
+553	はん	半	n-adv,n,n-suf	half
+554	ばん	晩	n-adv,n-t	evening
+555	～ばん	～番	n-adv,n-t	～st/th best
+556	パン		n	bread
+557	ハンカチ		n	handkerchief
+558	ばんごう	番号	n	number
+559	ばんごはん	晩御飯	n	dinner, evening meal
+560	はんぶん	半分		half
+561	ひがし	東	n	east
+562	～ひき	～匹		counter for small animals
+563	ひく	引く	u-v	to pull
+564	ひく	弾く	u-v	to play (piano, guitar)
+565	ひくい	低い	adj	short, low
+566	ひこうき	飛行機	n	aeroplane, airplane
+567	ひだり	左	n	left hand side
+568	ひと	人	n	man, person
+569	ひとつ	一つ	n	one
+570	ひとつき	一月		one month
+571	ひとり	一人	n	one person
+572	ひま	暇	na-adj,n	free time, leisure
+573	ひゃく	百	num	100, hundred
+574	びょういん	病院	n	hospital
+575	びょうき	病気	n	illness, disease, sickness
+576	ひらがな	平仮名	n	hiragana
+577	ひる	昼	n-adv,n-t	noon, daytime
+578	ひるごはん	昼御飯	n	lunch, midday meal
+579	ひろい	広い	adj	spacious, wide
+580	フィルム		n	film (roll of)
+581	ふうとう	封筒	n	envelope
+582	プール		n	swimming pool
+583	フォーク		n	fork
+584	ふく	吹く	u-v	to blow (wind, etc)
+585	ふく	服	n,n-suf	clothes
+586	ふたつ	二つ	n	two
+587	ぶたにく	豚肉	n	pork
+588	ふたり	二人	n	two people
+589	ふつか	二日	n	second day of the month, two days
+590	ふとい	太い	adj	fat, thick
+591	ふゆ	冬	n-adv,n-t	winter
+592	ふる	降る	u-v	to precipitate, to fall (e.g. rain)
+593	ふるい	古い	adj	old (not person), aged, ancient
+594	ふろ		n	bath
+595	～ふん	～分	suf	～minutes
+596	ぶんしょう	文章	suf	sentence, text
+597	ページ		n	page
+598	へた	下手	na-adj,n	unskillful, poor
+599	ベッド		n	bed
+600	ペット		n	pet
+601	へや	部屋	n	room
+602	へん	辺	n	area, vicinity
+603	ペン		n	pen
+604	べんきょう（する）	勉強	n,vs	study, diligence
+605	べんり	便利	na-adj,n	convenient, handy
+606	ほう			way
+607	ぼうし	帽子	n	hat
+608	ボールペン		n	ball-point pen
+609	ほか	外	n	other place, the rest
+610	ポケット		n	pocket
+611	ほしい	欲しい	adj	want, in need of, desire
+612	ポスト		n	post
+613	ほそい	細い	adj	thin, slender, fine
+614	ボタン		n	button
+615	ホテル		n	hotel
+616	ほん	本	n	book
+617	～ほん	～本		counter for long cylindrical things
+618	ほんだな	本棚	n	bookshelves
+619	ほんとう		adv	reality, truth
+620	～まい	～枚		counter for flat things
+621	まいあさ	毎朝	n-adv,n-t	every morning
+622	まいげつ/まいつき	毎月	n-adv,n	every month, monthly
+623	まいしゅう	毎週	n-adv,n-t	every week
+624	まいにち	毎日	n-adv,n-t	every day
+625	まいねん/まいとし	毎年	n-t	every year, annually
+626	まいばん	毎晩	n-adv,n-t	every night
+627	まえ	前	n-adv,n-t,suf	before, in front
+628	～まえ	～前	suf	in front of ～
+629	まがる	曲る	u-v	to turn, to bend
+630	まずい		adj	unappetising, unpleasant (taste)
+631	また		adv,conj,n	again, and
+632	まだ		adv	yet, still, besides
+633	まち	町	n	town, city
+634	まつ	待つ	u-v	to wait
+635	まっすぐ		na-adj,adv,n	straight (ahead), direct
+636	マッチ		n	match
+637	まど	窓	n	window
+638	まるい	丸い/円い	adj	round, circular
+639	まん	万	adv,num	ten thousand, everything
+640	まんねんひつ	万年筆	n	fountain pen
+641	みがく	磨く	u-v	to brush (teeth)
+642	みぎ	右	n	right hand side
+643	みじかい	短い	adj	short
+644	みず	水	n	water
+645	みせ	店	n,n-suf	store, shop, establishment
+646	みせる	見せる	ru-v	to show, to display
+647	みち	道	n	road, street
+648	みっか	三日	n	three days, the third day (of the month)
+649	みっつ	三つ	n	three
+650	みどり	緑	n	green
+651	みなさん	皆さん	n	everyone
+652	みなみ	南	n,vs	South, proceeding south
+653	みみ	耳	n	ear
+654	みる	見る	ru-v	to see, to watch
+655	みんな		adv,n	all, everyone, everybody
+656	むいか	六日		six days, sixth (day of month)
+657	むこう	向こう	n	beyond, over there
+658	むずかしい	難しい	adj	difficult
+659	むっつ	六つ	num	six
+660	むら	村	num	village
+661	め	目	n	eye, eyeball
+662	メートル		n	metre, meter
+663	めがね	眼鏡	n	spectacles, glasses
+664	もう		adv,int	already
+665	もう		adv,int	again
+666	もくようび	木曜日	n-adv,n	Thursday
+667	もしもし		conj,int	hello (on phone)
+668	もつ	持つ	u-v	(1) to hold, to carry, (2) to possess
+669	もっと		adv	more, longer, farther
+670	もの	物	n	thing, object
+671	もん	門	n,n-suf	gate
+672	もんだい	問題	n	problem, question
+673	～や	屋	n	～ shop
+674	やおや	八百屋	n	greengrocer
+675	やさい	野菜	n	vegetable
+676	やさしい	易しい	adj	easy, plain, simple
+677	やすい	安い	adj	cheap, inexpensive
+678	やすみ	休み	n	rest, vacation, holiday
+679	やすむ	休む	u-v,vi	to rest, to have a break, to take a day off
+680	やっつ	八つ	num	eight
+681	やま	山	n	mountain
+682	やる		u-v	to do
+683	ゆうがた	夕方	n-adv,n-t	evening
+684	ゆうはん	夕飯	n	dinner
+685	ゆうびんきょく	郵便局	n	post office
+686	ゆうべ	昨夜	n	last night
+687	ゆうめい	有名	na-adj,n	famous
+688	ゆき	雪	n	snow
+689	ゆっくり・と		adv,n	slowly, at ease
+690	ようか	八日	n	eight days, the eighth (day of the month)
+691	ようふく	洋服	n	Western-style clothes
+692	よく		adv	frequently, often
+693	よく		adv	well, skillfully
+694	よこ	横	n	beside, side, width
+695	よっか	四日	n	(1) 4th day of month, (2) four days
+696	よっつ	四つ	n	four
+697	よぶ	呼ぶ	u-v	to call out, to invite
+698	よむ	読む	u-v	to read
+699	よる	夜	n	evening, night
+700	よわい	弱い	adj	weak, feable
+701	らいげつ	来月	n-adv,n-t	next month
+702	らいしゅう	来週		next week
+703	らいねん	来年	n-adv,n-t	next year
+704	ラジオ		n	radio
+705	ラジカセ		n	radio cassette player
+706	りっぱ		na-adj,n	splendid, fine
+707	りゅうがくせい	留学生	n	overseas student
+708	りょうしん	両親	n	parents, both parents
+709	りょうり	料理	n,vs	cooking, cuisine
+710	りょこう	旅行	n,vs	travel, trip
+711	れい	零	n	zero, nought
+712	れいぞうこ	冷蔵庫	n	refrigerator
+713	レコード		n	record
+714	レストラン		n	restaurant
+715	れんしゅう（する）	練習	n,vs	(to) practice
+716	ろうか	廊下	n	corridor
+717	ろく	六	num	six
+718	ワイシャツ		n	shirt (lit: white shirt), business shirt
+719	わかい	若い	adj	young
+720	わかる	分かる	u-v	to understand
+721	わすれる	忘れる	ru-v	to forget
+722	わたし	私	adj-no,n	I, myself
+723	わたくし	私	adj-no,n	I, myself
+724	わたす	渡す	u-v	to pass over, to hand over
+725	わたる	渡る	u-v	to cross over, to go across
+726	わるい	悪い	adj	bad, inferior
+0	あ		int	Ah
+1	ああ		int	like that, that way
+2	あいさつ・する		n,vs	greeting
+3	あいだ	間	n	space, interval
+4	あう	合う	u-v	to fit, to match
+5	あかちゃん		n	baby, infant
+6	あがる	上がる	u-v	to rise, to go up
+7	あかんぼう	赤ん坊	n	baby
+8	あく	空く	u-v,vi	to open, to become empty
+9	アクセサリー		n	accessory
+10	あげる		ru-v	to give
+11	あさい	浅い	adj	shallow, superficial
+12	あじ	味	adj-na,n	flavor, taste
+13	アジア		n	Asia
+14	あす	明日	n-t	tomorrow
+15	あそび	遊び	n,n-suf	play
+16	あつまる	集る	u-v	to gather, to collect
+17	あつめる	集める	ru-v,vt	to collect, to assemble
+18	アナウンサー		n	announcer
+19	アフリカ		n	Africa
+20	アメリカ		n	America
+21	あやまる	謝る	u-v	to apologize
+22	アルコール		n	alcohol
+23	アルバイト		n	part-time job
+24	あんしん	安心	adj-na,n, vs	peace of mind, relief
+25	あんぜん	安全	adj-na,n	safety, security
+26	あんな		adj-na,adj-pn	such, like that
+27	あんない・する	案内	n,vs	information, guidance
+28	いか	以下	n	less than, below
+29	いがい	以外	n	with the exception of, excepting
+30	いがく	医学	n	medical science
+31	いきる	生きる	ru-v	to live, to exist
+32	いくら～ても			however much one may ～
+33	いけん	意見	n	opinion, view
+34	いし	石	n	stone
+35	いじめる		ru-v	to tease, to torment
+36	いじょう	以上	n-adv,n-t	more than, this is all
+37	いそぐ	急ぐ	u-v	to hurry, to rush
+38	いたす	致す	u-v	(hum) to do
+39	いただく		u-v	to receive, to take food or drink (hum)
+40	いちど	一度	n-adv	once, one time
+41	いっしょうけんめい	一生懸命	adj-na,n-adv,n	as well as one can, with utmost effort
+42	いっぱい		adv	full, to the utmost
+43	いと	糸	n,n-suf	thread
+44	いない	以内	n,n-suf	within, inside of
+45	いなか	田舎	giku n	rural, countryside
+46	いのる	祈る	u-v,vi	to pray, to wish
+47	いらっしゃる		aru-v	(hon) to be, to come, to go
+48	～いん	～員	n-suf	member of ～
+49	うえる	植える	ru-v	to plant, to grow
+50	うかがう		u-v,vi,vt	to visit
+51	うかがう		u-v,vi,vt	to ask
+52	うけつけ	受付	n	reception (desk), information ガス
+53	うける	受ける	ru-v	to take (lesson, test), to undergo
+54	うごく	動く	u-v,vi	to move
+55	うそ		n	lie
+56	うち		n	within
+57	うつ	打つ	u-v	to hit, to strike
+58	うつくしい	美しい	adj	beautiful, lovely
+59	うつす	写す	u-v	copy, to photograph, to film
+60	うつる	移る	u-v	to move (house), to transfer (department)
+61	うで	腕	n	arm
+62	うまい		adj	delicious
+63	うら	裏	n	reverse side, wrong side, back
+64	うりば	売り場	adj-no,n	place where things are sold
+65	うれしい		adj	happy, glad
+66	うん		n	yes (informal), alright
+67	うんてんしゅ	運転手	n	driver, chauffeur
+68	うんてん・する	運転	n,vs	driving
+69	うんどう・する	運動	n,vs	exercise
+70	エスカレーター		n	escalator
+71	えだ	枝	n	branch, twig
+72	えらぶ	選ぶ	v5b	to choose, to select
+73	えんりょ・する	遠慮	adj-na,n,vs	restraint, reserve
+74	おいでになる		u-v	(hon)to be
+75	おいわい	お祝い	n	congratulation, celebration
+76	オートバイ		n	motorcycle (lit: auto-bi(ke))
+77	オーバー		adj-na,n,vs	overcoat
+78	おかげ		n	thanks or owing to
+79	おかしい		adj	strange, funny
+80	～おき			after every ～
+81	おく	億	num	100,000,000, hundred million
+82	おくじょう	屋上	n	rooftop
+83	おくりもの	贈り物	n	present, gift
+84	おくる	送る	u-v	to send (a thing), to dispatch
+85	おくれる	遅れる	ru-v	to be late, to be delayed
+86	おこさん	お子さん	n	(someone else's) child
+87	おこす	起こす	u-v	to wake someone
+88	おこなう	行う	u-v	to perform, to do, to carry out
+89	おこる	怒る	u-v	to get angry, to be angry
+90	おしいれ	押し入れ	n	closet
+91	おじょうさん	お嬢さん	n	(1) (hon) daughter, (2) young lady
+92	おたく	お宅	n	(pol) your house, your home
+93	おちる	落ちる	ru-v	to fall, to drop
+94	おっしゃる		aru-v	(hon) to say, to speak
+95	おっと	夫	n	husband
+96	おつり		n	change (money), balance
+97	おと	音	n,n-suf	sound, note
+98	おとす	落す	u-v	to drop, to lose
+99	おどり	踊り	n	dance
+100	おどる	踊る	u-v	to dance
+101	おどろく	驚く	u-v	to be surprised, to be astonished
+102	おまつり	お祭り		festival
+103	おみまい	お見舞い	n	calling on someone who is ill, enquiry
+104	おみやげ	お土産	n	souvenir
+105	おもいだす	思い出す	u-v	to recall, to remember
+106	おもう	思う	u-v	to think, to feel
+107	おもちゃ		n	toy
+108	おもて	表	n,n-suf	the front, surface, exterior
+109	おや	親	n	parents
+110	おりる	下りる	ru-v	to descend a mountain, to (descend) go down stairs
+111	おる		u-v	to be (polite version of いる)
+112	おる	折る	u-v	to break, to fold, to pick a flower
+113	おれい	お礼	n	thanking, expression of gratitude
+114	おれる	折れる	ru-v,vi,vt	to break, to be folded, to give in, to turn (a corner)
+115	おわり	終わり	n	the end
+116	～おわる		suf	end of ～
+117	～か	～家		professional ～
+118	カーテン		n	curtain
+119	～かい	～会		～ meeting
+120	かいがん	海岸	n	coast, beach
+121	かいぎ	会議	n	meeting, conference
+122	かいぎしつ	会議室	n	conference room
+123	かいじょう	会場	n	assembly hall, meeting place, the grounds
+124	かいわ	会話	n	conversation
+125	かえり	帰り	n	return, coming back
+126	かえる	変える	ru-v,vt	to change, to alter, to vary
+127	かがく	科学	n	science
+128	かがみ	鏡	n	mirror
+129	～がくぶ	～学部		department of a university
+130	かける	掛ける		to hang, to put on (eg wall)
+131	かける			to sit down
+132	かける			to begin to
+133	かざる	飾る	u-v	to decorate, to ornament, to adorn
+134	かじ	火事	n	fire
+135	ガス		n	gas
+136	ガソリン		n	gasoline, petrol
+137	ガソリンスタンド		n	gasoline stand, gas station, petrol station
+138	かた	方	n-suf	way of doing
+139	かたい	堅/硬/固い	adj	solid, hard, firm
+140	かたち	形	n	shape
+141	かたづける	片付ける	ru-v	to tidy up, to put in order, to put away
+142	かちょう	課長	n	section manager
+143	かつ	勝つ	u-v	to win, to gain victory
+144	かっこう		no--adj, na-adj	appearance, manner
+145	かない	家内	n	housewife
+146	かなしい	悲しい	adj	sad, sorrowful
+147	かならず	必ず	adv	certainly, necessarily, invariably
+148	かねもち/おかねもち	お・金持ち	n	rich man
+149	かのじょ	彼女	n	she, girl-friend
+150	かべ	壁	n	wall
+151	かまう		u-v	to mind, to care about
+152	かみ	髪	n	hair
+153	かむ	噛む	u-v	to bite, to chew
+154	かよう	通う	u-v	(1) to go back and forth, (2) to commute
+155	ガラス		n	glass, pane
+156	かれ	彼	n	he, boyfriend
+157	かれら	彼ら	n	they (usually male)
+158	かわく	乾く	u-v,vi	to get dry
+159	かわり	代わり	n	substitute, alternate
+160	かわる	変わる	u-v,vi	to change, to be transformed, to vary
+161	かんがえる	考える	ru-v	to consider
+162	かんけい	関係	n,vs	relation, connection
+163	かんごふ	看護婦	n	(female) nurse
+164	かんたん	簡単	adj-na,n	simple
+165	がんばる	頑張る	u-v	to try one's best, to persist
+166	き	気	n	spirit, mood
+167	きかい	機会	n	chance, opportunity
+168	きけん	危険	adj-na,n	danger, peril, hazard
+169	きこえる	聞こえる	ru-v	to be heard, to be audible
+170	きしゃ	汽車	n	train (steam)
+171	ぎじゅつ	技術	n	art, technique, technology, skill
+172	きせつ	季節	n	season
+173	きそく	規則	n	rule, regulations
+174	きっと		adv,n	surely, definitely
+175	きぬ	絹	n	silk
+176	きびしい	厳しい	adj	strict
+177	きぶん	気分	n	feeling, mood
+178	きまる	決る	u-v	to be decided, to be settled
+179	きみ	君	n,suf	You (masculine term for female)
+180	きめる	決める	ru-v	to decide
+181	きもち	気持ち	n	feeling, sensation, mood
+182	きもの	着物	n	kimono
+183	きゃく	客	n	guest, customer
+184	きゅう	急	adj-na,n	(1) urgent, sudden, (2) steep
+185	きゅうこう	急行	n	express (eg train that bypasses stations)
+186	きょういく	教育	adj-no,n,vs	training, education
+187	きょうかい	教会	n	church
+188	きょうそう	競争	n,vs	competition, contest
+189	きょうみ	興味	n	interest (in something)
+190	きんじょ	近所	n	neighbourhood
+191	～く	～区	n	district ～
+192	ぐあい	具合	n	condition, state, health
+193	くうき	空気	n	air, atmosphere
+194	くうこう	空港	n	airport
+195	くさ	草	n	grass
+196	くださる		aru-v	(hon) to give, to confer
+197	くび	首	n	neck
+198	くも	雲	n	cloud
+199	くらべる	比べる	ru-v	to compare
+200	くれる		ru-v	to give, to do for
+201	くれる	暮れる	ru-v	to get dark, to come to an end
+202	～くん	～君	n-suf	Mr (junior) ～, master ～
+203	け	毛	n	hair
+204	け	毛	n	fur
+205	けいかく・する	計画	n,vs	plan, project, schedule
+206	けいけん・する	経験	n,vs	experience
+207	けいざい	経済	n	economics, finance, economy
+208	けいさつ	警察	n	police
+209	けが・する		n,vs	injury (to animate object), hurt
+210	ケーキ		n	cake
+211	けしき	景色	n	scenery, scene, landscape
+212	けしゴム	消しゴム	n	eraser
+213	げしゅく	下宿	n,vs	boarding, lodging, boarding house
+214	けっして	決して	adv	never
+215	けれど/けれども		conj	but, however
+216	～けん	～軒		counter for houses
+217	げんいん	原因	n	cause, origin, source
+218	けんか・する		n	quarrel
+219	げんかん	玄関	n	entrance way (in Japanese house)
+220	けんきゅう	研究	n,vs	study, research, investigation
+221	けんきゅうしつ	研究室	n	study room, laboratory
+222	けんぶつ	見物	n	a sight, an attraction
+223	こ	子	n	child
+224	ご～	御～	prefix	honourable ～
+225	こう		adv,int-n	like this, this way
+226	こうがい	郊外	n	suburb, outskirts
+227	こうぎ	講義	n,vs	lecture
+228	こうぎょう	工業	n	(manufacturing) industry
+229	こうこう/こうとうがっこう	高校/高等学校	n	high school/senior high school
+230	こうこうせい	高校生	n	high school student
+231	こうじょう	工場	n	factory
+232	こうちょう	校長	n	principal, headmaster
+233	こうつう	交通	n	traffic, transportation
+234	こうどう	講堂	n	auditorium
+235	こうむいん	公務員	n	government worker, public servant
+236	こくさい	国際	n	international
+237	こころ	心	n	core, heart
+238	～ございます		expr	to be (polite), to exist
+239	ごしゅじん	ご主人	n	your husband, her husband
+240	こしょう・する	故障	n,vs	break-down
+241	ごぞんじ	ご存じ	n	knowing, acquaintance
+242	こたえ	答	n	answer, response
+243	ごちそう		n,vs	feast, treating (someone)
+244	こっち		n	(1) this person, (2) this direction, (3) this side, (4) thereafter
+245	こと		n	thing, matter, fact
+246	ことり	小鳥	n	small bird
+247	このあいだ		n-adv	the other day, recently
+248	このごろ			these days, nowadays
+249	こまかい	細かい	adj	(1) small, (2) fine, minute
+250	ごみ		n	rubbish, trash, garbage
+251	こむ	込む	u-v	to be crowded
+252	こめ	米	n	uncooked rice
+253	ごらんになる			(hon) to see
+254	これから		n-t	after this
+255	こわい	怖い	adj	scary, frightening
+256	こわす	壊す	u-v,vt	to break, to break down
+257	こわれる	壊れる	ru-v,vi	to be broken, to break
+258	コンサート		n	concert
+259	こんど	今度	n-adv,n-t	now, next time
+260	コンピュータ/コンピューター		n	computer
+261	こんや	今夜	n-adv,n-t	this evening, tonight
+262	さいきん	最近	adj-no,n-adv,n-t	latest, most recent, nowadays
+263	さいご	最後	n	last, end, conclusion
+264	さいしょ	最初	adj-no,n-adv,n-t	beginning, first
+265	さか	坂	n	slope, hill
+266	さがす	探す	u-v	to search, to seek, to look for
+267	さがる	下る	u-v	to get down, to descend
+268	さかん	盛ん	adj-na,n	popularity, prosperous
+269	さげる	下げる	ru-v	to hang, to lower, to move back
+270	さしあげる	差し上げる	ru-v	(polite) to give, to offer
+271	さっき		n	some time ago
+272	さびしい	寂しい	adj	lonely, lonesome
+273	～さま	～様	n-suf	Mr or Mrs ～
+274	さらいげつ	さ来月		the month after next
+275	さらいしゅう	さ来週	n-adv,n-t	the week after next
+276	サラダ		n	salad
+277	さわぐ	騒ぐ	u-v	to make noise, to clamor, to be excited
+278	さわる	触る	u-v	to touch, to feel
+279	さんぎょう	産業	n	industry
+280	サンダル		n	sandal
+281	サンドイッチ		n	sandwich
+282	ざんねん	残念	adj-na,n	bad luck, disappointment
+283	し	市	n	city
+284	じ	字	n	character, hand-writing
+285	しあい	試合	n	match, game, contest
+286	しかた	仕方	n	way, method
+287	しかる		u-v	to scold
+288	～しき	～式		ceremony
+289	しけん	試験	n,vs	examination, test, study
+290	じこ	事故	n	accident
+291	じしん	地震	n	earthquake
+292	じだい	時代	n-t	period, epoch, era
+293	したぎ	下着	n	underwear
+294	したく・する	支度	n,vs	preparation
+295	しっかり		adj-na,adv,n	firmly, tightly, steady
+296	しっぱい	失敗	adj-no,n,vs	failure, mistake, blunder
+297	しつれい	失礼	adj-na,int,n,vs,exp	(1) discourtesy, impoliteness, (2) Excuse me, Goodbye
+298	じてん	辞典	n	dictionary
+299	しなもの	品物	n	goods
+300	しばらく		adv,int	little while
+301	しま	島	n	island
+302	（～て）しまう		u-v	to end up ～
+303	しみん	市民	n	citizen
+304	じむしょ	事務所	n	office
+305	しゃかい	社会	n	society, public
+306	しゃちょう	社長	n	company president, manager, director
+307	じゃま		adj-na,n,vs	hindrance, intrusion
+308	ジャム		n	jam
+309	じゆう	自由	adj-na,exp,n	freedom
+310	しゅうかん	習慣	n	custom, habit, manners
+311	じゅうしょ	住所	n	address (eg of house), residence, domicile
+312	じゅうどう	柔道	n	judo
+313	じゅうぶん	十分		enough , sufficient
+314	しゅっせき・する	出席	n,vs	attendance, presence
+315	しゅっぱつ・する	出発	n,vs	departure
+316	しゅみ	趣味	n	hobby
+317	じゅんび・する	準備	n	prepare
+318	しょうかい	紹介	n,vs	introduction
+319	しょうがつ	正月	n	New Year, New Year's Day
+320	しょうがっこう	小学校	n	primary school, elementary school
+321	しょうせつ	小説	n	novel, story
+322	しょうたい・する	招待	n,vs	invitation
+323	しょうち・する	承知	n,vs	consent, acceptance
+324	しょうらい	将来	n-adv,n-t	future, prospects
+325	しょくじ・する	食事	n,vs	meal
+326	しょくりょうひん	食料品	n	foodstuff, groceries
+327	じょせい	女性	n	woman
+328	しらせる	知らせる	ru-v	to notify, to advise
+329	しらべる	調べる	ru-v,vt	to investigate, to check up
+330	じんこう	人口	n	population
+331	じんじゃ	神社	n	Shinto shrine
+332	しんせつ	親切	adj-na,n	kindness, gentleness
+333	しんぱい・する	心配	adj-na,n,vs	worry, concern
+334	しんぶんしゃ	新聞社	n	newspaper company
+335	すいえい	水泳	n,vs	swimming
+336	すいどう	水道	n	water service, water supply
+337	ずいぶん		adj-na,n-adv	extremely
+338	すうがく	数学	n	mathematics, arithmetic
+339	スーツ		n	suit
+340	スーツケース		n	suitcase
+341	スーパー（マーケット）		n	super (market)
+342	すぎる	過ぎる	ru-v,vi	to exceed, to go beyond
+343	すく		u-v,vi	to become empty
+344	すく		u-v,vi	to be less crowded
+345	スクリーン		n	screen
+346	すごい	凄い	adj	terrific, amazing, to a great extent
+347	すすむ	進む	u-v	to make progress, to advance, to proceed
+348	すっかり		adv	all, completely, thoroughly
+349	ずっと		adv,n	straight, quickly, all of a sudden
+350	ステーキ		n	steak
+351	ステレオ		n	stereo
+352	すてる	捨てる	ru-v	to throw away
+353	すな	砂	n	sand
+354	すばらしい		adj	wonderful, splendid
+355	すべる	滑る	u-v	to slide, to slip
+356	すみ	隅	n,n-suf	corner, nook
+357	すむ	済む	u-v	to finish, to end
+358	すり		n	pickpocket
+359	すると		conj	and, then
+360	～せい	～製		made in　～
+361	せいかつ・する	生活	n,vs	living, life (one's daily existence), livelihood
+362	せいさん・する	生産	ru-v,vi	production, manufacture
+363	せいじ	政治	n	politics, government
+364	せいよう	西洋	n	the west, Western countries
+365	せかい	世界	n	the world
+366	せき	席	n	seat
+367	せつめい	説明	n,vs	explanation
+368	せなか	背中	n	back (of body)
+369	ぜひ		adv,n	certainly, without fail
+370	せわ・する	世話	n,vs	looking after, help
+371	せん	線	n,n-suf	line, wire
+372	ぜんぜん		adv	wholly, entirely
+373	せんそう	戦争	n,vs	war
+374	せんぱい	先輩	n	senior, superior, elder
+375	せんもん	専門	n	speciality, study major
+376	そう		adv	really
+377	そうだん・する	相談	n,vs	consultation, discussion
+378	そだてる	育てる	ru-v,vt	to raise, to rear, to bring up
+379	そつぎょう	卒業	n,vs	graduation
+380	そふ	祖父	n	grandfather
+381	ソフト		n	soft
+382	そぼ	祖母	n	grandmother
+383	それで		conj	and, thereupon, because of that
+384	それに		conj	besides, moreover
+385	それほど		adv	to that degree, extent
+386	そろそろ		n	gradually, steadily, soon
+387	そんな		adj-na,adj-pn,adv,n	such, like that, that sort of
+388	そんなに		uk	so much, like that
+389	～だい	～代		～ age/period
+390	たいいん・する	退院	n,vs	leaving hospital
+391	だいがくせい	大学生	n	college student, university student
+392	だいじ	大事	adj-na,n	important, valuable, serious matter
+393	だいたい	大体	n	generally, substantially
+394	たいてい		adj-na,adv,n	generally, usually
+395	タイプ		n	type, style
+396	だいぶ	大分	adv	considerably, greatly, a lot
+397	たいふう	台風	n	typhoon
+398	たおれる	倒れる	ru-v,vi	to collapse, to break down
+399	だから		conj,n	so, therefore
+400	たしか	確か	adj-na,adv,exp,n	certain, sure, definite
+401	たす	足す	u-v	to add (numbers), to do (eg. one's business)
+402	～だす			start to ～
+403	たずねる	訪ねる	ru-v	to visit
+404	たずねる	尋ねる	ru-v	to ask
+405	ただしい	正しい	adj	right, just, correct
+406	たたみ	畳	n	tatami mat (Japanese straw mat)
+407	～だて	建て	n	two storied, separate housing
+408	たてる	立てる	ru-v	to stand (something) up, to erect (something)
+409	たてる	建てる	ru-v	to build, to construct
+410	たとえば	例えば	adv	for example, eg.
+411	たな	棚	n	shelves, rack
+412	たのしむ	楽む	u-v	to enjoy oneself
+413	たのしみ	楽しみ	n	pleasure, joy
+414	たまに		adv,suf	occasionally, once in a while
+415	ため	為	n	good, advantage, in order to
+416	だめ		adj-na,n	useless, no good, hopeless
+417	たりる	足りる	ru-v	to be sufficient, to be enough
+418	だんせい	男性	n	male, man
+419	だんぼう	暖房	n	heating
+420	ち	血	n	blood
+421	チェック・する		n	check
+422	ちから	力	n-suf	strength, power
+423	ちっとも		adv	not at all (neg. verb)
+424	～ちゃん		n	suffix for familiar (female) person
+425	ちゅうい	注意	n,vs	caution, being careful, attention (heed)
+426	ちゅうがっこう	中学校	n	junior high school, middle school pupil
+427	ちゅうしゃ	注射	n,vs	injection
+428	ちゅうしゃじょう	駐車場	n	parking lot, parking place
+429	～ちょう	～町	n	～ of the town
+430	ちり	地理	n	geography
+431	～（に）ついて		expr	about, concerning, regarding
+432	つかまえる	捕まえる	ru-v	to catch, to arrest, to seize
+433	つき		n-suf	moon
+434	～つき	～月	n-temp	month
+435	つく	点く	u-v, intrans-verb	to be started, to be switched on
+436	つける		ru-v	to take
+437	つける	漬ける	ru-v	to soak, to moisten, to pickle
+438	つごう	都合	adv,n	circumstances, condition, convenience
+439	つたえる	伝える	ru-v	to tell, to report
+440	つづく	続く	u-v,vi	to be continued
+441	～つづける	～続ける	ru-v,vt	to continue doing ～
+442	つづける	続ける	ru-v,vt	to continue, to keep up, to keep on
+443	つつむ	包む	u-v	wrap, pack
+444	つま	妻	n	(hum) wife
+445	つもり		n	intention, plan
+446	つる	釣る	u-v	to fish
+447	つれる	連れる	ru-v	to lead, to take (a person)
+448	ていねい	丁寧	adj-na,n	polite, courteous
+449	テキスト		n	(1)text, (2)text book
+450	てきとう	適当	adj-na,n	fitness, suitability
+451	できる		ru-v	to be able to do
+452	できるだけ			if at all possible, as much as possible
+453	てつだう	手伝う	u-v	to help, to assist, to take part in
+454	テニス		n	tennis
+455	てぶくろ	手袋	n	glove
+456	てら	寺	n	temple
+457	てん	点	n,n-suf	spot, mark, point, dot
+458	てんいん	店員	n	shop assistant, employee, clerk, salesperson
+459	てんきよほう	天気予報		weather forecast, weather report
+460	でんとう	電灯	n	electric light
+461	でんぽう	電報	n	telegram
+462	てんらんかい	展覧会	n	exhibition
+463	と	都	n	metroplitan, municipal
+464	どうぐ	道具	n	tool, means
+465	とうとう			finally, at last
+466	どうぶつえん	動物園	n	zoo
+467	とおく	遠く	adj-no,n-adv,n	far away, distant
+468	とおり	通り	n-suf	～ Street, ～ Avenue
+469	とおる	通る	u-v	to pass (by), to go through
+470	とくに	特に	adv	particularly, especially
+471	とくべつ	特別	adj-na,adv,n	special
+472	とこや		n	barber
+473	とちゅう	途中	n-adv,n-t	on the way, en route, midway
+474	とっきゅう	特急	n	limited express (train, faster than an express)
+475	とどける	届ける	ru-v	to reach
+476	とまる	泊まる	u-v	to stay at (eg. hotel)
+477	とめる	止める	ru-v,vt	to stop (something)
+478	とりかえる	取り替える	ru-v	to exchange, to replace
+479	どろぼう	泥棒	n,vs	thief, burglar, robber
+480	どんどん		adv	steadily, little by little
+481	なおす	直す	u-v,vt	to fix, to repair
+482	なおる	直る	u-v,vi	to be fixed, to be repaired
+483	なおる	治る	u-v,vi	to be cured, to heal
+484	なかなか	中々	adv	very, considerably, quite
+485	なく	泣く	u-v	to cry, to weep
+486	なくなる	無くなる	u-v	to disappear, to get lost
+487	なくなる	亡くなる	u-v	to die
+488	なげる	投げる	ru-v	to throw, to cast away
+489	なさる		aru-v	(hon) to do
+490	なる	鳴る	u-v	to sound, to ring, to resound
+491	なるべく		adv	as much as possible
+492	なるほど		adv,exp	I see, now I understand
+493	なれる	慣れる	ru-v	to grow accustomed to
+494	におい		ru-v	odour, scent, smell
+495	にがい	苦い	adj	bitter
+496	～にくい		suf	difficult to do ～
+497	にげる	逃げる	ru-v	to escape, to run away
+498	にっき	日記	n	diary, journal
+499	にゅういん・する	入院	n,vs	hospitalization
+500	にゅうがく・する	入学	n	entry to school or university, matriculation
+501	にる	似る	ru-v	to resemble, to be similar
+502	にんぎょう	人形	n	doll, puppet, figure
+503	ぬすむ	盗む	u-v	to steal
+504	ぬる	塗る	u-v	to paint, to plaster
+505	ぬれる		ru-v	to get wet
+506	ねだん		n	price, cost
+507	ねつ	熱	n,n-suf	fever, temperature
+508	ねっしん		adj-na,n	zeal, enthusiasm
+509	ねぼう	寝坊	n,vs	sleeping in late
+510	ねむい	眠い	adj	sleepy, drowsy
+511	ねむる	眠る	u-v	to sleep
+512	のこる	残る	u-v	to remain, to be left
+513	のど		n	throat
+514	のりかえる	乗り換える	ru-v	to transfer (trains), to change (bus, train)
+515	のりもの	乗り物	n	vehicle
+516	は	葉	n	leaf
+517	ばあい	場合	n-adv,n	case, situation
+518	パート（タイム）		n-adv,n	part time (esp female part time employees)
+519	ばい	倍	n,vi,vs,vt	twice, double
+520	はいけん・する	拝見	n,vs	(hum) (pol) seeing, look at
+521	はいしゃ	歯医者	n	dentist
+522	～ばかり		suf	just did ～, only
+523	はこぶ	運ぶ	v5b	to transport, to carry
+524	～はじめる	～始める	ru-v,vt	to start doing　～, the beginning of ～
+525	はじめる	始める	ru-v,vt	to start, to begin
+526	ばしょ	場所	n	place, location
+527	はず		n	it should be so
+528	はずかしい	恥ずかしい	adj	shy, ashamed, embarrassed
+529	パソコン		n	(personal) computer
+530	はつおん	発音	n,vs	pronunciation
+531	はっきり		adv,n	clearly, plainly, distinctly
+532	はなみ	花見	n,vs	cherry-blossom viewing, flower viewing
+533	パパ		n	papa, father
+534	はやし	林	n	woods, forester
+535	はらう	払う	u-v	to pay
+536	ばんぐみ	番組	n	program (eg. TV)
+537	はんたい	反対	adj-na,n,vs	oppose, opposition, resistance
+538	ハンバーグ		n	hamburger (meat, no bun)
+539	ひ	日	n-adv,n-t	sun, sunshine, day
+540	ひ	火	n,n-suf	fire, flame, blaze
+541	ピアノ		n	piano
+542	ひえる	冷える	ru-v,vi	to grow cold, to get chilly, to cool down
+543	ひかる	光る	ru-v,vi	to shine, to glitter
+544	ひかり	光	n	light
+545	ひきだし	引き出し	n	drawer, drawing out
+546	ひげ		n	beard
+547	ひこうじょう	飛行場	n	airport
+548	ひさしぶり	久しぶり	exp	after a long time
+549	びじゅつかん	美術館	n	art gallery, art museum
+550	ひじょうに	非常に	adv	very, extremely, exceedingly
+551	びっくりする		vs	to be surprised
+552	ひっこす	引っ越す	u-v	to move, to change residence
+553	ひつよう	必要	adj-na,n	necessary, essential
+554	ひどい		adj	cruel, awful
+555	ひらく	開く	u-v	to open (eg. a festival)
+556	ビル		n	(abbr) building, bill
+557	ひるま	昼間	n-adv,n-t	daytime, during the day
+558	ひるやすみ	昼休み	n-adv,n-t	lunch break, noon recess, noon rest period
+559	ひろう	拾う	u-v	to pick up, to find, to gather
+560	ファックス		ru-v,vi	fax
+561	ふえる	増える	ru-v,vi	to increase, to multiply
+562	ふかい	深い	adj	deep, profound, thick
+563	ふくざつ	複雑	adj-na,n	complexity, complication
+564	ふくしゅう	復習	n,vs	review, revision
+565	ぶちょう	部長	adjn	head of a section
+566	ふつう	普通	adj-na,adj-no,adv,n	(1) generally, ordinarily, usually, (2) train that stops at every station
+567	ぶどう		n	grapes
+568	ふとる	太る	u-v	to grow fat (stout, plump), to become fat
+569	ふとん	布団	n	bedding (Japanese style), futon
+570	ふね	舟	n	ship, boat
+571	ふべん	不便	adj-na,n	inconvenience
+572	ふむ	踏む	u-v	to step on, to tread on
+573	プレゼント		n	present, gift
+574	ぶんか	文化	n	culture, civilization
+575	ぶんがく	文学	n	literature
+576	ぶんぽう	文法	n	grammar
+577	べつ	別	adj-na,n,n-suf	distinction, different
+578	ベル		n	bell
+579	へん	変	adj-na,n	strange, odd, peculiar
+580	へんじ	返事	n,vs	reply, answer
+581	ぼうえき	貿易	n	trade (foreign)
+582	ほうそう・する	放送	n,vs	broadcast, broadcasting
+583	ほうりつ	法律	n	law
+584	ぼく	僕	n	(male) I, manservant
+585	ほし	星	n	star
+586	ほど		n	degree, extent
+587	ほとんど		n-adv,n-t	mostly, almost
+588	ほめる		ru-v	to praise
+589	ほんやく	翻訳	n,vs	translation (written)
+590	まいる	参る	u-v	(1) (hum) to go, to come
+591	まける	負ける	ru-v	to lose, to be defeated
+592	まじめ		adj-na,n	diligent, serious
+593	まず		adv	first (of all), to start with
+594	または		conj,exp	or, otherwise
+595	まちがえる	間違える	ru-v	to err, to make a mistake
+596	まにあう	間に合う	u-v	(1) to be in time for
+597	～まま		n	as it is
+598	まわり	周り	n,n-suf	surroundings, circulation
+599	まわる	回る	u-v	to go around, to revolve
+600	まんが	漫画	n	comic, cartoon
+601	まんなか	真中	n	middle, centre
+602	みえる	見える	ru-v	to be seen, to be in sight
+603	みずうみ	湖	n	lake
+604	みそ	味噌	n	miso, bean paste
+605	みつかる	見つかる	u-v	(uk) to be found, to be discovered
+606	みつける	見つける	ru-v	to discover, to find
+607	みな	皆	adv,n	everyone, everybody
+608	みなと	港	n	harbour, port
+609	むかえる	迎える	u-v	to go out to meet
+610	むかう	向かう	u-v	to face, to go towards
+611	むかし	昔	adj-no,n-adv,n-t	olden days, former
+612	むし	虫	n	insect
+613	むすこ	息子	n	(hum) son
+614	むすめ	娘	n	(hum) daughter
+615	むり	無理	adj-na,n,vs	unreasonable, impossible
+616	～め	～目	suf	number ～ sequence, ～nd/th
+617	めしあがる	召し上がる	u-v	(pol) to eat
+618	めずらしい	珍しい	adj	unusual, rare
+619	もうしあげる	申し上げる	ru-v	to say, to tell
+620	もうす	申す	u-v	(hum) to be called, to say
+621	もうすぐ		expr	soon, very soon
+622	もし		adv	if
+623	もちろん		adv	certainly, of course
+624	もっとも		adv	most, extremely
+625	もどる	戻る	u-v	to turn back, to return
+626	もめん	木綿	n	cotton
+627	もらう		u-v	to receive
+628	もり	森	n	forest
+629	やく	焼く	u-v	to bake, to grill
+630	やくにたつ	役に立つ	u-v	to be helpful, to be useful
+631	やくそく	約束	n,vs	arrangement, promise
+632	やける	焼ける	ru-v,vi	to burn, to be roasted, to be sunburnt
+633	やさしい	優しい	adj	kind, gentle
+634	～やすい			easy to do ～
+635	やせる		ru-v	to become thin, to lose weight
+636	やっと		adv	at last, at length
+637	やはり/やっぱり		adv,exp	as I thought, absolutely
+638	やむ		u-v,vi	to cease, to stop
+639	やめる	止める	ru-v	to end, to stop, to resign
+640	やる		u-v	(col)to do
+641	やわらかい	柔らかい	adj	soft, tender
+642	ゆ	湯	n	hot water
+643	ゆうはん	夕飯	n	evening meal
+644	ゆしゅつ・する	輸出	n,vs	export
+645	ゆにゅう・する	輸入	n,vs	import
+646	ゆび	指	n	finger
+647	ゆびわ	指輪	n	(finger) ring
+648	ゆめ	夢	n	dream
+649	ゆれる	揺れる	ru-v	to shake, to sway
+650	よう	様	adj-na	way, manner, kind
+651	よう	用	n,n-suf	task, business, use
+652	ようい	用意	n,vs	preparation
+653	ようじ	用事	n	tasks, chores
+654	よごれる	汚れる	ru-v	to get dirty, to become dirty
+655	よしゅう	予習	n,vs	preparation for a lesson
+656	よてい	予定	n,vs	plans, arrangement, schedule
+657	よやく	予約	n,vs	reservation, booking
+658	よる	寄る	u-v	to visit, to drop in
+659	（～に）よると			according to ～
+660	よろこぶ	喜ぶ	v5b	to be delighted, to be glad
+661	よろしい		adj	(hon) good, OK, all right
+662	りゆう	理由	n	reason, pretext, motive
+663	りよう	利用	n,vs	use, utilization
+664	りょうほう	両方	n	both sides, both parties
+665	りょかん	旅館	n	Japanese hotel, inn
+666	るす	留守	n	absence, being away from home
+667	れいぼう	冷房	n	cooling, air conditioning
+668	れきし	歴史	n	history
+669	レジ		n	register
+670	レポート/リポート		n	report, essay, assignment (aus)
+671	れんらく	連絡	n,vs	communication, contact, connection
+672	ワープロ		n	word processor
+673	わかす	沸かす	u-v,vt	to boil, to heat
+674	わかれる	別れる	ru-v	to be divided, to part from, to separate
+675	わく	沸く	u-v	to boil, to grow hot, to get excited
+676	わけ	訳	n	meaning, reason
+677	わすれもの	忘れ物	n	lost article, something forgotten
+678	わらう	笑う	u-v	to laugh, to smile
+679	わりあい	割合	adv,n	rate, ratio, percentage
+680	われる	割れる	ru-v,vi	to break
+*	くん	訓	-	-
+*	まつり	祭り	-	-
+*	たいよう	太陽	-	-
+*	れい	礼	-	-
+*	いわい	祝い	-	-
+*	ろんぶん	論文	-	-
+*	よなか	夜中	-	-
+*	きょうかしょ	教科書	-	-
+*	おとこのひと	男の人	-	-
+*	ぜったい	絶対	-	-
+*	ちこく	遅刻	-	-
+*	みまい	見舞い	-	-

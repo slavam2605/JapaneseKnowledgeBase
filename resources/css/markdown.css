@@ -1,0 +1,7 @@
+body {
+    font-size: 150%;
+}
+
+.markdown code {
+    background: rgb(220, 220, 220);
+}
