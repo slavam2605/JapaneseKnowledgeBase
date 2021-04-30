@@ -8,6 +8,7 @@ import kotlinx.html.*
 import server.wordEntry
 import utils.KanjiLists
 import utils.exportedKanjiWordsPath
+import utils.слово
 import java.io.File
 
 class KanjiWordsJLPTList(
@@ -43,13 +44,13 @@ class KanjiWordsJLPTList(
     }
 
     private fun BODY.renderKanjiWords(targetJlptLevel: Int) {
+        val targetWords = filteredWords.filter { it.getJLPTLevel() == targetJlptLevel }
         button(classes = "collapsible") {
             style = "font-size: 100%;"
-            +"JLPT $targetJlptLevel"
+            +"JLPT $targetJlptLevel (${слово(targetWords.size, true)})"
         }
         div(classes = "content") {
-            filteredWords.forEach { word ->
-                if (word.getJLPTLevel() != targetJlptLevel) return@forEach
+            targetWords.forEach { word ->
                 wordEntry(allWords, word)
             }
         }
