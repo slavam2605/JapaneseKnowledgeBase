@@ -8,6 +8,7 @@ val mediaFolder = "$appData\\Anki2\\1-й пользователь\\collection.me
 const val wordsFile = "word_list_2.txt"
 const val txtWordsFile = "missing_words.txt"
 val exportedFilePath = "$userHome\\Minna no Nihongo_ слова.txt"
+val exportedKanjiWordsPath = "$userHome\\Слова из кандзи.txt"
 const val commonWordsFile = "common_words.txt"
 const val jmDictFile = "JMdict"
 const val jmDictSimplifiedFile = "JMdict_simplified"
