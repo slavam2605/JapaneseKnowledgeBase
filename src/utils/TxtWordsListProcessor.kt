@@ -27,6 +27,15 @@ class TxtWordsListProcessor(val file: File) {
         }
     }
 
+    fun readExportedKanjiList(): List<TxtWordEntry> {
+        return file.useLines { lines ->
+            lines.map { line ->
+                val (kanji, kana, definition) = line.split("\t")
+                TxtWordEntry(kana, kanji, "", definition, emptyList())
+            }.toList()
+        }
+    }
+
     companion object {
         fun writeSimpleList(list: List<TxtWordEntry>, file: File) {
             file.bufferedWriter().use { writer ->
