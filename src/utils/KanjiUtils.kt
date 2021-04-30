@@ -40,17 +40,16 @@ private fun getReadingsForKanji(
         ?: return emptyMap()
 
     return groupWordsByKanjiReading(kanji, words) { word ->
-        val meanings = word.meanings.filterIsInstance<MeaningEntry.MeaningMeaning>()
         if (includeOnlyCommon) {
             if (!word.isCommon())
                 return@groupWordsByKanjiReading false
         }
         if (excludeKanaOnly) {
-            if (meanings.firstOrNull()?.tags?.any { it.tag.contains("kana alone") } == true)
+            if (word.isKanaOnly())
                 return@groupWordsByKanjiReading false
         }
         if (excludeArchaisms) {
-            if (meanings.all { meaning -> meaning.tags.any { it.tag.contains("Archaism") } })
+            if (word.isAllArchaisms())
                 return@groupWordsByKanjiReading false
         }
         true

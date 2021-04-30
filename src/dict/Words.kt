@@ -22,6 +22,18 @@ interface WordEntry {
         return extraTags.contains("Common word")
     }
 
+    fun isKanaOnly(): Boolean {
+        val meaningMeanings = meanings.filterIsInstance<MeaningEntry.MeaningMeaning>()
+        return meaningMeanings.firstOrNull()?.tags?.any {
+            it.tag.contains("kana alone") || it.tag.contains("Usually written using kana alone")
+        } == true
+    }
+
+    fun isAllArchaisms(): Boolean {
+        val meaningMeanings = meanings.filterIsInstance<MeaningEntry.MeaningMeaning>()
+        return meaningMeanings.all { meaning -> meaning.tags.any { it.tag.contains("Archaism") } }
+    }
+
     fun getJLPTLevel(): Int? {
         return when {
             extraTags.contains("JLPT N5") -> 5
