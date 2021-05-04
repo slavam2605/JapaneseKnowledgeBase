@@ -11,7 +11,7 @@ import utils.exportedKanjiWordsPath
 import utils.слово
 import java.io.File
 
-class KanjiWordsJLPTList(
+class KanjiWordsJLPTListPage(
     private val allWords: AllWordsList
 ) : PageBuilderBase("/kanji_words_list") {
     private val deckKanjiWords = TxtWordsListProcessor(File(exportedKanjiWordsPath))
