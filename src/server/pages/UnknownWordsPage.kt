@@ -2,7 +2,7 @@ package server.pages
 
 import TxtWordsListProcessor
 import dict.*
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 import server.notLearnedKanjiList
 import server.wordEntry
@@ -11,8 +11,8 @@ import java.io.File
 
 class UnknownWordsPage(val dataset: Map<Char, List<WordEntry>>, val allWords: AllWordsList) : PageBuilderBase("/unknown_words") {
     private val allN45Words = TxtWordsListProcessor(resolveResource("jlpt_n5+n4_words.txt")).readSimpleList()
-    private val missingWords = TxtWordsListProcessor(resolveResource(txtWordsFile)).readSimpleList()
-    private val deckWords = TxtWordsListProcessor(File(exportedFilePath)).readExportedList() + allN45Words
+    private val missingWords = TxtWordsListProcessor(resolveResource(PathConstants.txtWordsFile)).readSimpleList()
+    private val deckWords = TxtWordsListProcessor(PathConstants.exportedFilePath.toFile()).readExportedList() + allN45Words
 
     private fun isLearned(kanji: Char) =
         kanji in dataset && kanji !in notLearnedKanjiList

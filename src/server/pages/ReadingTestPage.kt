@@ -4,7 +4,7 @@ import dict.AllWordsList
 import dict.JMDict
 import dict.WordEntry
 import dict.jishoDataset
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 import server.notLearnedKanjiList
 import utils.isKanji

@@ -3,18 +3,17 @@ package server.pages
 import TxtWordsListProcessor
 import dict.AllWordsList
 import dict.WordEntry
-import io.ktor.application.*
+import io.ktor.server.application.*
 import kotlinx.html.*
 import server.wordEntry
 import utils.KanjiLists
-import utils.exportedKanjiWordsPath
+import utils.PathConstants.exportedKanjiWordsPath
 import utils.слово
-import java.io.File
 
 class KanjiWordsJLPTListPage(
     private val allWords: AllWordsList
 ) : PageBuilderBase("/kanji_words_list") {
-    private val deckKanjiWords = TxtWordsListProcessor(File(exportedKanjiWordsPath))
+    private val deckKanjiWords = TxtWordsListProcessor(exportedKanjiWordsPath.toFile())
         .readExportedKanjiList()
         .map { it.kanji }
         .toSet()

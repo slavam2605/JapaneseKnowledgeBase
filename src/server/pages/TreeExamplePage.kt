@@ -1,7 +1,7 @@
 package server.pages
 
 import dict.OutlierDict
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 
 class TreeExamplePage : PageBuilderBase("/tree") {

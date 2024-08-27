@@ -1,7 +1,7 @@
 package server.pages
 
 import dict.*
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 import utils.pusaUnknownN5N4Kanji
 import server.notLearnedKanjiList
@@ -41,7 +41,7 @@ class WritingTestPage(val allWordsList: AllWordsList) : PageBuilderBase("/writin
         fun getBestWord(): WordEntry? {
             return wordList
                 .filter { estimateWordLength(it) <= leftWidth }
-                .maxBy { estimateWordLength(it) }
+                .maxByOrNull { estimateWordLength(it) }
         }
 
         while (wordList.isNotEmpty()) {
@@ -168,8 +168,8 @@ class WritingTestPage(val allWordsList: AllWordsList) : PageBuilderBase("/writin
                     null
             }
         return candidates.firstOrNull { it.first.length < 15 }
-            ?: candidates.minBy { it.first.length }
-            ?: "" to ""
+            ?: candidates.minByOrNull { it.first.length }
+            ?: ("" to "")
     }
 
     companion object {

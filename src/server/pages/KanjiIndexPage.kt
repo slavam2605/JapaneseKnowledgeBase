@@ -2,7 +2,7 @@ package server.pages
 
 import TxtWordsListProcessor
 import dict.WordEntry
-import io.ktor.application.*
+import io.ktor.server.application.*
 import kotlinx.html.*
 import org.jsoup.nodes.Element
 import server.KanjiVG
@@ -16,8 +16,8 @@ class KanjiIndexPage(
     val kanjiVG: KanjiVG
 ) : PageBuilderBase("/") {
     private val allN45Words = TxtWordsListProcessor(resolveResource("jlpt_n5+n4_words.txt")).readSimpleList()
-    private val missingWords = TxtWordsListProcessor(resolveResource(txtWordsFile)).readSimpleList()
-    private val deckWords = TxtWordsListProcessor(File(exportedFilePath)).readExportedList() + allN45Words
+    private val missingWords = TxtWordsListProcessor(resolveResource(PathConstants.txtWordsFile)).readSimpleList()
+    private val deckWords = TxtWordsListProcessor(PathConstants.exportedFilePath.toFile()).readExportedList() + allN45Words
 
     override fun HEAD.buildHead() {
         link("/kanji_index.css", "stylesheet", "text/css")

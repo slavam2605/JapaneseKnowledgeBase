@@ -12,11 +12,11 @@ object KanjiLists {
     val jouyou = grade1 + grade2 + grade3 + grade4 + grade5 + grade6 + secondarySchool + additions
 
     private val jlptKanji = listOf(
-        kanjiJLPTN1File,
-        kanjiJLPTN2File,
-        kanjiJLPTN3File,
-        kanjiJLPTN4File,
-        kanjiJLPTN5File
+        PathConstants.kanjiJLPTN1File,
+        PathConstants.kanjiJLPTN2File,
+        PathConstants.kanjiJLPTN3File,
+        PathConstants.kanjiJLPTN4File,
+        PathConstants.kanjiJLPTN5File
     ).map { resolveResource(it).readText().toList() }
 
     fun getJlptKanji(level: Int) = jlptKanji[level - 1]

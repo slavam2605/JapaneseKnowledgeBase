@@ -4,17 +4,15 @@ import TxtWordsListProcessor
 import dict.AllWordsList
 import dict.MeaningEntry
 import dict.WordEntry
-import dict.WordEntryImpl
 import kotlinx.html.*
-import utils.exportedFilePath
+import utils.PathConstants
 import utils.isKanji
 import utils.resolveResource
-import utils.txtWordsFile
 import java.io.File
 
 private val allN45Words = TxtWordsListProcessor(resolveResource("jlpt_n5+n4_words.txt")).readSimpleList()
-private val missingWords = TxtWordsListProcessor(resolveResource(txtWordsFile)).readSimpleList()
-private val deckWords = TxtWordsListProcessor(File(exportedFilePath)).readExportedList() + allN45Words
+private val missingWords = TxtWordsListProcessor(resolveResource(PathConstants.txtWordsFile)).readSimpleList()
+private val deckWords = TxtWordsListProcessor(PathConstants.exportedFilePath.toFile()).readExportedList() + allN45Words
 
 fun FlowContent.wordWithFurigana(word: WordEntry, hideKanji: Boolean = false, showFurigana: Boolean = true, block: RUBY.() -> Unit = {}) {
     ruby {

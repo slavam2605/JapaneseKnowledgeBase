@@ -2,16 +2,16 @@ package server.pages
 
 import dict.AllWordsList
 import dict.WordEntry
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 import parser.JapaneseLexer
 import parser.JapaneseToken
 import server.wordWithFurigana
+import utils.PathConstants
 import utils.resolveResource
-import utils.sampleTextFile
 
 class AnnotatedTextPage(allWords: AllWordsList) : PageBuilderBase("/text") {
-    private val text = resolveResource(sampleTextFile).readText()
+    private val text = resolveResource(PathConstants.sampleTextFile).readText()
     private val lexer = JapaneseLexer(text, allWords)
 
     override fun HEAD.buildHead() {

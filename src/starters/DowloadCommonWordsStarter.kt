@@ -1,7 +1,7 @@
 package starters
 
 import downloadCommonWords
-import utils.commonWordsFile
+import utils.PathConstants
 import utils.resolveResource
 
 private const val skipDangerousRun = true
@@ -12,5 +12,5 @@ fun main() {
         return
     }
 
-    downloadCommonWords(resolveResource(commonWordsFile))
+    downloadCommonWords(resolveResource(PathConstants.commonWordsFile))
 }
