@@ -1,6 +1,6 @@
 package server.pages
 
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 
 class MarkdownTestPage : PageBuilderBase("markdown") {

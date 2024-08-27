@@ -3,10 +3,9 @@ package starters
 import TxtWordsListProcessor
 import dict.jishoDataset
 import server.WebApplication
-import utils.exportedFilePath
-import java.io.File
+import utils.PathConstants.exportedFilePath
 
 fun main() {
-    val deckWords = TxtWordsListProcessor(File(exportedFilePath)).readExportedList()
+    val deckWords = TxtWordsListProcessor(exportedFilePath.toFile()).readExportedList()
     WebApplication(jishoDataset, deckWords).start()
 }

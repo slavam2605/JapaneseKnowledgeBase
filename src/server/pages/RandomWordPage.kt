@@ -1,7 +1,7 @@
 package server.pages
 
 import dict.WordEntry
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 import server.wordWithFurigana
 import utils.isKanji

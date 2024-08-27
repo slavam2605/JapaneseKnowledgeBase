@@ -1,12 +1,12 @@
 package starters
 
 import downloadWords
+import utils.PathConstants
 import utils.resolveResource
-import utils.wordsFile
 
 fun main() {
     downloadWords(
-        resolveResource(wordsFile),
+        resolveResource(PathConstants.wordsFile),
         '現', '性', '制', '務', '支', '報', '解', '資', '際', '権',
         '判', '在', '件', '任', '増', '情', '示', '認', '確', '容',
         '演', '論', '能', '格', '過', '常', '状', '職', '構', '断',

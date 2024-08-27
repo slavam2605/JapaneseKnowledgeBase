@@ -1,7 +1,7 @@
 package server.pages
 
 import TxtWordEntry
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 
 class KanjiUsagePage(val words: List<TxtWordEntry>) : PageBuilderBase("/kanji_usage") {

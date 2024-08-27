@@ -3,14 +3,14 @@ package server
 import TxtWordEntry
 import dict.AllWordsList
 import dict.WordEntry
-import io.ktor.application.Application
-import io.ktor.application.ApplicationCall
-import io.ktor.application.call
-import io.ktor.application.log
-import io.ktor.html.respondHtml
-import io.ktor.response.respondFile
-import io.ktor.routing.get
-import io.ktor.routing.routing
+import io.ktor.server.application.Application
+import io.ktor.server.application.ApplicationCall
+import io.ktor.server.application.call
+import io.ktor.server.application.log
+import io.ktor.server.html.respondHtml
+import io.ktor.server.response.respondFile
+import io.ktor.server.routing.get
+import io.ktor.server.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import kotlinx.html.*
@@ -80,7 +80,7 @@ class WebApplication(
             get("/{filePath...}") {
                 val filePath = context.parameters.getAll("filePath")!!.joinToString(separator = "/")
                 val relativeLocation = allowedFiles[filePath] ?: run {
-                    log.warn("Asked for file '$filePath' which is not allowed")
+                    this@initModule.log.warn("Asked for file '$filePath' which is not allowed")
                     return@get
                 }
 

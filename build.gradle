@@ -24,21 +24,24 @@ sourceSets {
 
 repositories {
     mavenLocal()
-    jcenter()
+    mavenCentral()
     maven { url 'https://kotlin.bintray.com/ktor' }
     maven { url 'https://kotlin.bintray.com/kotlin-js-wrappers' }
+    maven { url 'https://maven.pkg.jetbrains.space' }
+    maven { url 'https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev' }
 }
 
 dependencies {
-    compile "org.jsoup:jsoup:1.12.1"
+    implementation 'org.jsoup:jsoup:1.15.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "io.ktor:ktor-server-netty:$ktor_version"
-    implementation "ch.qos.logback:logback-classic:$logback_version"
     implementation "io.ktor:ktor-server-core:$ktor_version"
-    implementation "io.ktor:ktor-html-builder:$ktor_version"
-    implementation "org.jetbrains:kotlin-css-jvm:1.0.0-pre.31-kotlin-1.2.41"
+    implementation "io.ktor:ktor-server-netty:$ktor_version"
+    implementation "io.ktor:ktor-server-html-builder:$ktor_version"
+    implementation "ch.qos.logback:logback-classic:$logback_version"
+    implementation group: 'org.jetbrains.kotlin-wrappers', name: 'kotlin-css-jvm', version: '1.0.0-pre.798'
     implementation "io.ktor:ktor-client-core:$ktor_version"
     implementation "io.ktor:ktor-client-core-jvm:$ktor_version"
     implementation "io.ktor:ktor-client-apache:$ktor_version"
+    implementation 'org.xerial:sqlite-jdbc:3.41.2.2'
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
 }

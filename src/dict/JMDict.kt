@@ -2,8 +2,8 @@ package dict
 
 import org.w3c.dom.Element
 import org.w3c.dom.NodeList
+import utils.PathConstants
 import utils.isKanji
-import utils.jmDictFile
 import utils.resolveResource
 import java.io.File
 import java.lang.System.currentTimeMillis
@@ -12,7 +12,7 @@ import javax.xml.parsers.DocumentBuilderFactory
 class JMDict private constructor(file: File) {
     companion object {
         val instance: JMDict by lazy {
-            JMDict(resolveResource(jmDictFile))
+            JMDict(resolveResource(PathConstants.jmDictFile))
         }
     }
 

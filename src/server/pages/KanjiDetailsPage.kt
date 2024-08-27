@@ -3,7 +3,7 @@ package server.pages
 import TxtWordsListProcessor
 import dict.AllWordsList
 import dict.WordEntry
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 import org.jsoup.nodes.Element
 import server.KanjiVG

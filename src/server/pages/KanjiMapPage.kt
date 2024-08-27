@@ -2,7 +2,7 @@ package server.pages
 
 import TxtWordEntry
 import dict.WordEntry
-import io.ktor.application.ApplicationCall
+import io.ktor.server.application.ApplicationCall
 import kotlinx.html.BODY
 import kotlinx.html.HEAD
 import kotlinx.html.a
