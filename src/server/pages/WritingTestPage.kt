@@ -162,7 +162,7 @@ class WritingTestPage(val allWordsList: AllWordsList) : PageBuilderBase("/writin
                     .replace("\\([^()]*?\\)".toRegex(), "")
                     .split(",", ";")[0]
 
-                if (shortPart.any { it.toLowerCase() in 'а'..'я' || it.toLowerCase() in 'a'..'z' })
+                if (shortPart.any { it.lowercaseChar() in 'а'..'я' || it.lowercaseChar() in 'a'..'z' })
                     shortPart to firstMeaning
                 else
                     null

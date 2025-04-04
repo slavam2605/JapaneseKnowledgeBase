@@ -18,8 +18,22 @@ class TxtWordsListProcessor(val file: File) {
         return text.splitAnkiHtml()
     }
 
+    private inline fun <reified T> File.useLinesSafe(block: (Sequence<String>) -> T): T {
+        return try {
+            useLines(block = block)
+        } catch (e: Exception) {
+            System.err.println("Failed to read from ${file.name}")
+            e.printStackTrace(System.err)
+            return when {
+                T::class.java.isAssignableFrom(List::class.java) -> emptyList<Any>() as T
+                T::class.java.isAssignableFrom(Set::class.java) -> emptySet<Any>() as T
+                else -> error("Failed to return an empty value of type ${T::class.java}")
+            }
+        }
+    }
+
     fun readExportedList(): List<TxtWordEntry> {
-        return file.useLines { lines ->
+        return file.useLinesSafe { lines ->
             lines.map { line ->
                 val (kana, kanji, definition, examples, _, type, _) = line.split("\t")
                 TxtWordEntry(kana, kanji, type, definition, readExamples(examples))
@@ -28,11 +42,21 @@ class TxtWordsListProcessor(val file: File) {
     }
 
     fun readExportedKanjiList(): List<TxtWordEntry> {
-        return file.useLines { lines ->
-            lines.map { line ->
+        return file.useLinesSafe { lines ->
+            lines.mapNotNull { line ->
+                if (line.startsWith("#")) return@mapNotNull null
                 val (kanji, kana, definition) = line.split("\t")
                 TxtWordEntry(kana, kanji, "", definition, emptyList())
             }.toList()
+        }
+    }
+
+    fun readExportedKanjiSet(): Set<String> {
+        return file.useLinesSafe { lines ->
+            lines
+                .filter { !it.startsWith("#") }
+                .mapNotNull { it.split("\t").firstOrNull() }
+                .toSet()
         }
     }
 

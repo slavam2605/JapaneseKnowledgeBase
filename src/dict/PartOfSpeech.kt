@@ -110,7 +110,7 @@ enum class PartOfSpeech(val description: String, val localizedDescription: Strin
 
         fun fromDescription(description: String): PartOfSpeech? {
             fun normalize(text: String) = text
-                .toLowerCase()
+                .lowercase()
                 .replace("`", "")
                 .replace("'", "")
 
