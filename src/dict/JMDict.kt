@@ -6,8 +6,8 @@ import utils.PathConstants
 import utils.isKanji
 import utils.resolveResource
 import java.io.File
-import java.lang.System.currentTimeMillis
 import javax.xml.parsers.DocumentBuilderFactory
+import kotlin.time.measureTime
 
 class JMDict private constructor(file: File) {
     companion object {
@@ -21,24 +21,23 @@ class JMDict private constructor(file: File) {
         get() = _wordsMap
 
     init {
-        val start = currentTimeMillis()
+        val loadTime = measureTime {
+            val factory = DocumentBuilderFactory.newInstance()
+            val builder = factory.newDocumentBuilder()
+            val doc = builder.parse(file)
 
-        val factory = DocumentBuilderFactory.newInstance()
-        val builder = factory.newDocumentBuilder()
-        val doc = builder.parse(file)
+            doc.getElementsByTagName("entry").forEach { entry ->
+                val readings = entry.getElementsByTagName("reb").toList().map { it.textContent }
 
-        doc.getElementsByTagName("entry").forEach { entry ->
-            val readings = entry.getElementsByTagName("reb").toList().map { it.textContent }
-
-            entry.getElementsByTagName("keb").forEach { element ->
-                val writing = element.textContent
-                val list = _wordsMap.getOrPut(writing) { mutableListOf() }
-                list.add(entry.toWordEntry(writing, readings))
+                entry.getElementsByTagName("keb").forEach { element ->
+                    val writing = element.textContent
+                    val list = _wordsMap.getOrPut(writing) { mutableListOf() }
+                    list.add(entry.toWordEntry(writing, readings))
+                }
             }
         }
 
-        val diff = currentTimeMillis() - start
-        println("JMDict is loaded in $diff ms")
+        println("JMDict is loaded in ${loadTime.inWholeMilliseconds} ms")
     }
 
     private fun Element.toWordEntry(writing: String, readings: List<String>): WordEntry {
