@@ -117,7 +117,7 @@ class KanjiDetailsPage(
         br()
         for (topLevelElements in kanjiElement.toplevelKanjiCompounds(1)) {
             val compoundElement = topLevelElements.attr("kvg:element")
-            val kanjiWithCompound = kanjiVG.getKanjiWithCompound(compoundElement)
+            val kanjiWithCompound = kanjiVG.getDatasetKanjiWithCompound(compoundElement)
             if (kanjiWithCompound.size <= 1)
                 continue
 
