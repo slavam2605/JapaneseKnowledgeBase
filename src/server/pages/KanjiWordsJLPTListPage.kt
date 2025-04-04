@@ -7,16 +7,13 @@ import io.ktor.server.application.*
 import kotlinx.html.*
 import server.wordEntry
 import utils.KanjiLists
-import utils.PathConstants.exportedKanjiWordsPath
+import utils.PathConstants
 import utils.слово
 
 class KanjiWordsJLPTListPage(
     private val allWords: AllWordsList
 ) : PageBuilderBase("/kanji_words_list") {
-    private val deckKanjiWords = TxtWordsListProcessor(exportedKanjiWordsPath.toFile())
-        .readExportedKanjiList()
-        .map { it.kanji }
-        .toSet()
+    private val deckKanjiWords = TxtWordsListProcessor(PathConstants.exportedKanjiWordsPath.toFile()).readExportedKanjiSet()
     private val kanjiSet = KanjiLists.getJlptKanji(3).toSet()
     private val filteredWords = allWords.words.mapNotNull { (_, list) ->
         for (word in list) {

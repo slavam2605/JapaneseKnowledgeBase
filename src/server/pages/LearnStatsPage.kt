@@ -1,20 +1,24 @@
 package server.pages
 
-import TxtWordsListProcessor
 import dict.WordEntry
 import io.ktor.server.application.ApplicationCall
 import kotlinx.html.*
 import server.kanjiPerDay
-import server.notLearnedKanjiList
 import utils.*
+import utils.AnkiDataManager.deckName
 import utils.KanjiLists.getJlptKanji
-import java.io.File
 import kotlin.math.ceil
 import kotlin.math.roundToInt
 
 class LearnStatsPage(val dataset: Map<Char, List<WordEntry>>) : PageBuilderBase("/stats") {
+    private var currentMode = "kanji"
+
     private fun isLearned(kanji: Char) =
-        kanji in dataset && kanji !in notLearnedKanjiList
+        when (currentMode) {
+            "kanji" -> "$kanji" in AnkiDataManager.kanjiDeck.keys
+            "words" -> AnkiDataManager.kanjiWordsDeck.any { it.kanji.contains(kanji) }
+            else -> error("Unknown mode: $currentMode")
+        }
 
     override fun HEAD.buildHead() {
         script(src = "/collapsible.js") {}
@@ -23,11 +27,37 @@ class LearnStatsPage(val dataset: Map<Char, List<WordEntry>>) : PageBuilderBase(
     }
 
     override fun BODY.buildPage(call: ApplicationCall) {
-        div("stat-card") {
-            jlptKanjiStats()
+        currentMode = call.parameters["mode"] ?: "kanji"
+        val currentDeckName: String
+        val otherDeckName: String
+        val otherMode: String
+        if (currentMode == "kanji") {
+            currentDeckName = AnkiDataManager.KANJI_DECK.deckName()
+            otherDeckName = AnkiDataManager.KANJI_WORDS_DECK.deckName()
+            otherMode = "words"
+        } else {
+            currentDeckName = AnkiDataManager.KANJI_WORDS_DECK.deckName()
+            otherDeckName = AnkiDataManager.KANJI_DECK.deckName()
+            otherMode = "kanji"
         }
-        div("stat-card") {
-            jouyouKanjiStats()
+
+        div("head-block") {
+            div {
+                +"Процент использования кандзи в колоде $currentDeckName"
+            }
+            div {
+                a("/stats?mode=$otherMode") {
+                    +"Переключить на колоду $otherDeckName"
+                }
+            }
+        }
+        div {
+            div("stat-card") {
+                jlptKanjiStats()
+            }
+            div("stat-card") {
+                jouyouKanjiStats()
+            }
         }
     }
 
@@ -75,7 +105,9 @@ class LearnStatsPage(val dataset: Map<Char, List<WordEntry>>) : PageBuilderBase(
                 progressBar(ratio, estimateKanjiDaysTooltip(total - learned), true)
                 div(classes = "content") {
                     style = "padding-left: 0;"
-                    +missingKanji.joinToString()
+                    missingKanji.forEach {
+                        a("/kanji?c=$it", classes = "kanji-link") { +"$it" }
+                    }
                 }
             }
         }
