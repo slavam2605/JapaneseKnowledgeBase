@@ -40,6 +40,7 @@ object PathConstants {
     const val jmDictFile = "JMdict"
     const val enamDictFile = "enamdict"
     const val sampleTextFile = "sample_text.txt"
+    const val greekConjugations = "greek_conjugations.txt"
 
     const val kanjiJLPTN5File = "jlpt5_kanji_list.txt"
     const val kanjiJLPTN4File = "jlpt4_kanji_list.txt"
