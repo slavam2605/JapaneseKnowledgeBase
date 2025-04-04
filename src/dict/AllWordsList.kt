@@ -1,10 +1,13 @@
 package dict
 
 import TxtWordEntry
+import utils.ENAMDict
+import utils.PathConstants.enamDictFile
+import utils.resolveResource
 
 class AllWordsList(dataset: Map<Char, List<WordEntry>>) {
     val words = mutableMapOf<String, MutableList<WordEntry>>()
-//    private val enamDict = parseENAMDict(resolveResource(enamDictFile))
+    private val enamDict = ENAMDict(resolveResource(enamDictFile))
 
     init {
         val jmDict = JMDict.instance
@@ -37,8 +40,8 @@ class AllWordsList(dataset: Map<Char, List<WordEntry>>) {
     }
 
     fun getWords(text: String): List<WordEntry> = words[text]
+        ?: enamDict[text]?.map { WordEntryImpl.fromENAMEntry(it) }
         ?: emptyList()
-        /*?: enamDict.find { it.text == text }?.let { dict.WordEntryImpl(it.text, emptyList(), emptyList(), emptyList()) }*/
 
     fun findWordWithReading(word: WordEntry): WordEntry {
         val newWord = getWords(word.text).find {
