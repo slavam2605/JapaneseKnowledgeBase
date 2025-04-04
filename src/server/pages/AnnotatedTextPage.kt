@@ -10,9 +10,8 @@ import server.wordWithFurigana
 import utils.PathConstants
 import utils.resolveResource
 
-class AnnotatedTextPage(allWords: AllWordsList) : PageBuilderBase("/text") {
+class AnnotatedTextPage(private val allWords: AllWordsList) : PageBuilderBase("/text") {
     private val text = resolveResource(PathConstants.sampleTextFile).readText()
-    private val lexer = JapaneseLexer(text, allWords)
 
     override fun HEAD.buildHead() {
         link("/tooltip.css", "stylesheet", "text/css")
@@ -79,6 +78,7 @@ class AnnotatedTextPage(allWords: AllWordsList) : PageBuilderBase("/text") {
     }
 
     override fun BODY.buildPage(call: ApplicationCall) {
+        val lexer = JapaneseLexer(text, allWords)
         div {
             for (token in lexer.getTokens().take(400)) {
                 when (token) {
