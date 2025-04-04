@@ -3,6 +3,7 @@ package dict
 import fromBase64
 import readFromString
 import toBase64
+import utils.ENAMEntry
 import utils.isHiragana
 import utils.isKana
 import writeToString
@@ -62,6 +63,16 @@ class WordEntryImpl(
                 readFromString(sMeanings, "|") { MeaningEntry.readFromString(it) }
             val tags = readFromString(sTags, "|") { it }
             return WordEntryImpl(text, furigana, meanings, emptyList(), tags)
+        }
+
+        fun fromENAMEntry(entry: ENAMEntry): WordEntry {
+            return WordEntryImpl(
+                text = entry.text,
+                furigana = listOf(entry.reading),
+                meanings = listOf(MeaningEntry.MeaningMeaning(entry.meaning, emptyList())),
+                grammarInfo = emptyList(),
+                extraTags = entry.codes.map { it.description }
+            )
         }
     }
 
