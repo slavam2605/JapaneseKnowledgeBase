@@ -1,6 +1,6 @@
 package starters
 
-import downloadKanjiList
+import utils.downloadKanjiList
 import utils.*
 
 fun main() {
