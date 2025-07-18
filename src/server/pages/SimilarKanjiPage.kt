@@ -63,7 +63,7 @@ class SimilarKanjiPage(
             "g" -> {
                 val children = element.children().map { buildElementTree(it) }
                 val compound = element.attr("kvg:element").ifBlank { null }
-                KanjiCompoundTree(compound, children.sumBy { it.strokeCount }, children)
+                KanjiCompoundTree(compound, children.sumOf { it.strokeCount }, children)
             }
             "path" -> {
                 KanjiCompoundTree(null, 1, emptyList())
@@ -79,7 +79,7 @@ class SimilarKanjiPage(
     private fun findSimilarKanji(kanji: Char): Set<Char> {
         val compounds = kanjiVG.getKanjiCompounds(kanji)
         val result = mutableSetOf<Char>()
-        for (position in KanjiVG.KanjiCompoundPosition.values()) {
+        for (position in KanjiVG.KanjiCompoundPosition.entries) {
             result.addAll(kanjiVG.getKanjiWithCompound("$kanji", position))
         }
         for ((compound, position, depth) in compounds) {

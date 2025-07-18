@@ -80,27 +80,27 @@ private val voicelessableConsonantHiraganaSet = setOf(
 )
 
 fun Char.toKatakana(): Char =
-    if (isHiragana) (toInt() + 0x60).toChar() else this
+    if (isHiragana) (code + 0x60).toChar() else this
 
 fun Char.toHiragana(): Char {
     if (isFullWidthKatakana) {
-        return (toInt() - 0x60).toChar()
+        return (code - 0x60).toChar()
     } else if (isHalfWidthKatakana) {
-        return (toInt() - 0xcf25).toChar()
+        return (code - 0xcf25).toChar()
     }
     return this
 }
 
 fun Char.toVoicedHiragana(): Char {
     if (this in voicableConsonantHiraganaSet)
-        return (toInt() + 1).toChar()
+        return (code + 1).toChar()
 
     return this
 }
 
 fun Char.toVoicelessHiragana(): Char {
     if (this in voicelessableConsonantHiraganaSet)
-        return (toInt() + 2).toChar()
+        return (code + 2).toChar()
 
     return this
 }
@@ -108,8 +108,8 @@ fun Char.toVoicelessHiragana(): Char {
 fun Char.toPlainHiragana(): Char {
     return when (this) {
         'ゔ' -> 'う'
-        in voicedHiraganaSet -> (toInt() - 1).toChar()
-        in voicelessHiraganaSet -> (toInt() - 2).toChar()
+        in voicedHiraganaSet -> (code - 1).toChar()
+        in voicelessHiraganaSet -> (code - 2).toChar()
         else -> this
     }
 }
