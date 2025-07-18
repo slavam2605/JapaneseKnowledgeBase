@@ -7,6 +7,7 @@ import okhttp3.Request
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import utils.PathConstants
+import utils.getFileSizeString
 import utils.resolveResource
 import java.io.BufferedOutputStream
 import java.io.File
@@ -108,16 +109,6 @@ fun unzipToFolder(zipFile: File, targetDir: File) {
     println("Unzipped ${zipFile.name}\n" +
             "\t$newCount new files\n" +
             "\t$replaceCount replaced files")
-}
-
-fun getFileSizeString(file: File): String {
-    val size = file.length().toDouble()
-    val (value, unit) = when {
-        size < 1024        -> size to "B"
-        size < 1024 * 1024 -> size / 1024 to "KB"
-        else               -> size / (1024 * 1024) to "MB"
-    }
-    return "%.2f %s".format(value, unit)
 }
 
 fun compressNewsArticles(folderName: String) {
