@@ -73,3 +73,7 @@ resources/word_list*
 resources/enamdict
 resources/kanjivg.xml
 resources/common_words.txt
+
+# NHK news are packed to ZIP, ignore unpacked files
+resources/nhk-easy-news
+resources/nhk-hard-news

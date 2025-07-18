@@ -25,6 +25,8 @@ repositories {
 
 dependencies {
     implementation("org.jsoup:jsoup:1.15.3")
+    implementation("org.json:json:20240303")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
     implementation("io.ktor:ktor-server-core:$ktorVersion")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")
@@ -103,4 +105,8 @@ tasks {
         classpath = sourceSets.main.get().runtimeClasspath
         mainClass.set("starters.WordsDownloaderStarterKt")
     }
+}
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.compilerOptions {
+    freeCompilerArgs.set(listOf("-XXLanguage:+BreakContinueInInlineLambdas"))
 }
