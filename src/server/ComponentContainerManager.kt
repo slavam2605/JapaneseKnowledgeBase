@@ -28,12 +28,14 @@ object ComponentContainerManager {
                         .path.substringBeforeLast('.')
                         .replace(File.separatorChar, '.')
                     val foundClass = javaClass.classLoader.loadClass(classQualifiedName)
-                    if (!foundClass.isInterface &&
-                        !Modifier.isAbstract(foundClass.modifiers) &&
-                        clazz.isAssignableFrom(foundClass))
-                        createInstance(foundClass) as T?
-                    else
-                        null
+                    if (foundClass.isInterface ||
+                        Modifier.isAbstract(foundClass.modifiers) ||
+                        !clazz.isAssignableFrom(foundClass)) {
+                        return@mapNotNullTo null
+                    }
+
+                    @Suppress("UNCHECKED_CAST")
+                    createInstance(foundClass) as T?
                 }
         }
         return result
@@ -54,6 +56,7 @@ object ComponentContainerManager {
             println("Success")
         }
 
+        @Suppress("UNCHECKED_CAST")
         return ctor.newInstance(*arguments) as T
     }
 
