@@ -7,16 +7,10 @@ import okhttp3.Request
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import utils.PathConstants
-import utils.getFileSizeString
+import utils.compressResource
 import utils.resolveResource
-import java.io.BufferedOutputStream
+import utils.uncompressResource
 import java.io.File
-import java.io.FileInputStream
-import java.io.FileOutputStream
-import java.util.zip.Deflater
-import java.util.zip.ZipEntry
-import java.util.zip.ZipInputStream
-import java.util.zip.ZipOutputStream
 
 private class DoNotRetry : Exception()
 
@@ -69,70 +63,6 @@ fun getNewsListJson(): JSONObject {
     return JSONArray(resourceFile.readText()).getJSONObject(0)
 }
 
-fun zipFolder(sourceFolder: File, outputZip: File) {
-    ZipOutputStream(BufferedOutputStream(FileOutputStream(outputZip))).use { zipOut ->
-        zipOut.setLevel(Deflater.BEST_COMPRESSION)
-        sourceFolder.walkTopDown()
-            .filter { it.isFile }
-            .forEach { file ->
-                val relativePath = sourceFolder.toPath().relativize(file.toPath()).toString()
-                zipOut.putNextEntry(ZipEntry(relativePath))
-                file.inputStream().use { input -> input.copyTo(zipOut) }
-                zipOut.closeEntry()
-            }
-    }
-}
-
-fun unzipToFolder(zipFile: File, targetDir: File) {
-    if (!targetDir.exists()) targetDir.mkdirs()
-
-    var newCount = 0
-    var replaceCount = 0
-    ZipInputStream(FileInputStream(zipFile)).use { zipIn ->
-        var entry = zipIn.nextEntry
-        while (entry != null) {
-            val outFile = File(targetDir, entry.name)
-            if (entry.isDirectory) {
-                outFile.mkdirs()
-            } else {
-                outFile.parentFile?.mkdirs()
-                if (outFile.exists()) { replaceCount++ } else { newCount++ }
-                FileOutputStream(outFile).use { output ->
-                    zipIn.copyTo(output)
-                }
-            }
-            zipIn.closeEntry()
-            entry = zipIn.nextEntry
-        }
-    }
-
-    println("Unzipped ${zipFile.name}\n" +
-            "\t$newCount new files\n" +
-            "\t$replaceCount replaced files")
-}
-
-fun compressNewsArticles(folderName: String) {
-    val sourceDir = resolveResource(folderName)
-    val outputZip = resolveResource("$folderName.zip")
-    if (!sourceDir.exists() || !sourceDir.isDirectory) {
-        println("Folder not found: ${sourceDir.absolutePath}")
-        return
-    }
-
-    zipFolder(sourceDir, outputZip)
-    println("Packed news articles to ${outputZip.name}, resulting size: ${getFileSizeString(outputZip)}")
-}
-
-fun unzipOldArticles(folderName: String) {
-    val zipFile = resolveResource("$folderName.zip")
-    val targetDir = resolveResource(folderName)
-    if (!zipFile.exists()) {
-        println("Skipped unzipping old articles, no ${zipFile.name} is found")
-        return
-    }
-
-    unzipToFolder(zipFile, targetDir)
-}
 
 fun downloadNews(
     data: List<String>,
@@ -170,8 +100,8 @@ fun downloadNews(
 }
 
 fun main() {
-    unzipOldArticles(PathConstants.nhkEasyNewsFolder)
-    unzipOldArticles(PathConstants.nhkHardNewsFolder)
+    uncompressResource(PathConstants.nhkEasyNewsFolder)
+    uncompressResource(PathConstants.nhkHardNewsFolder)
 
     val newsListJson = getNewsListJson()
     val newsIds = newsListJson.keySet().flatMap { keyDate ->
@@ -200,6 +130,6 @@ fun main() {
         fileNameGetter = { it.substringAfterLast('/') }
     )
 
-    compressNewsArticles(PathConstants.nhkEasyNewsFolder)
-    compressNewsArticles(PathConstants.nhkHardNewsFolder)
+    compressResource(PathConstants.nhkEasyNewsFolder)
+    compressResource(PathConstants.nhkHardNewsFolder)
 }
