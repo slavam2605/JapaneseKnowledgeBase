@@ -109,6 +109,48 @@ private val knownIrregularFuture = mutableMapOf(
     "πεθαίνω" to "πεθάνω",
     "αρρωσταίνω" to "αρρωστήσω",
     "θέλω" to "θελήσω", // TODO: discuss if this form is actually used
+
+    // New
+    "λέγομαι" to "λεχθώ",
+    "γυμνάζομαι" to "γυμναστώ",
+    "εργάζομαι" to "εργαστώ",
+    "ενδιαφέρομαι" to "ενδιαφερθώ",
+    "μοιράζομαι" to "μοιραστώ",
+    "πνίγομαι" to "πνιγώ",
+    "κρύβομαι" to "κρυφτώ",
+    "βρέχομαι" to "βραχώ",
+    "καίγομαι" to "καώ",
+    "εύχομαι" to "ευχηθώ",
+    "δέχομαι" to "δεχτώ",
+    "συμπεριφέρομαι" to "συμπεριφερθώ",
+    "στεναχωριέμαι" to "στεναχωρηθώ",
+    "φέρομαι" to "φερθώ",
+    "φαίνομαι" to "φανώ",
+    "ασχολούμαι" to "ασχοληθώ",
+    "ερωτεύομαι" to "ερωτευθώ",
+    "σέβομαι" to "σεβαστώ",
+    "κατευθύνομαι" to "κατευθυνθώ",
+    "βιάζομαι" to "βιαστώ",
+    "αναφέρομαι" to "αναφερθώ",
+    "τρελαίνομαι" to "τρελαθώ",
+    "μαζεύομαι" to "μαζευτώ",
+    "παραπονιέμαι" to "παραπονεθώ",
+    "βαριέμαι" to "βαρεθώ",
+    "προσαρμόζομαι" to "προσαρμοστώ",
+    "συμβουλεύομαι" to "συμβουλευτώ",
+    "ενοχλούμαι" to "ενοχληθώ",
+    "ικανοποιούμαι" to "ικανοποιηθώ",
+    "οδηγούμαι" to "οδηγηθώ",
+    "χρησιμοποιούμαι" to "χρησιμοποιηθώ",
+    "αρνούμαι" to "αρνηθώ",
+    "περιποιούμαι" to "περιποιηθώ",
+    "συνεννοούμαι" to "συνεννοηθώ",
+    "αναρωτιέμαι" to "αναρωτηθώ",
+    "χασμουριέμαι" to "χασμουρηθώ",
+    "κουνιέμαι" to "κουνηθώ",
+    "συναντιέμαι" to "συναντηθώ",
+    "ευχαριστιέμαι" to "ευχαριστηθώ",
+    "αγαπιέμαι" to "αγαπηθώ",
 )
 
 private val knownIrregularFutureFull = mapOf(
@@ -188,7 +230,49 @@ private val knownIrregularPastBase = mutableMapOf(
     "φοβάμαι" to "φοβήθηκα",
     "λυπάμαι" to "λυπήθηκα",
     "θυμάμαι" to "θυμήθηκα",
-    "γεννιέμαι" to "γεννήθηκα"
+    "γεννιέμαι" to "γεννήθηκα",
+
+    // New
+    "λέγομαι" to "λέχθηκα",
+    "γυμνάζομαι" to "γυμνάστηκα",
+    "εργάζομαι" to "εργάστηκα",
+    "ενδιαφέρομαι" to "ενδιαφέρθηκα",
+    "μοιράζομαι" to "μοιράστηκα",
+    "πνίγομαι" to "πνίγηκα",
+    "κρύβομαι" to "κρύφτηκα",
+    "βρέχομαι" to "βράχηκα",
+    "καίγομαι" to "κάηκα",
+    "εύχομαι" to "ευχήθηκα",
+    "δέχομαι" to "δέχτηκα",
+    "συμπεριφέρομαι" to "συμπεριφέρθηκα",
+    "στεναχωριέμαι" to "στεναχωρήθηκα",
+    "φέρομαι" to "φέρθηκα",
+    "φαίνομαι" to "φάνηκα",
+    "ασχολούμαι" to "ασχολήθηκα",
+    "ερωτεύομαι" to "ερωτεύθηκα",
+    "σέβομαι" to "σεβάστηκα",
+    "κατευθύνομαι" to "κατευθύνθηκα",
+    "βιάζομαι" to "βιάστηκα",
+    "αναφέρομαι" to "αναφέρθηκα",
+    "τρελαίνομαι" to "τρελάθηκα",
+    "μαζεύομαι" to "μαζεύτηκα",
+    "παραπονιέμαι" to "παραπονέθηκα",
+    "βαριέμαι" to "βαρέθηκα",
+    "προσαρμόζομαι" to "προσαρμόστηκα",
+    "συμβουλεύομαι" to "συμβουλεύτηκα",
+    "ενοχλούμαι" to "ενοχλήθηκα",
+    "ικανοποιούμαι" to "ικανοποιήθηκα",
+    "οδηγούμαι" to "οδηγήθηκα",
+    "χρησιμοποιούμαι" to "χρησιμοποιήθηκα",
+    "αρνούμαι" to "αρνήθηκα",
+    "περιποιούμαι" to "περιποιήθηκα",
+    "συνεννοούμαι" to "συνεννοήθηκα",
+    "αναρωτιέμαι" to "αναρωτήθηκα",
+    "χασμουριέμαι" to "χασμουρήθηκα",
+    "κουνιέμαι" to "κουνήθηκα",
+    "συναντιέμαι" to "συναντήθηκα",
+    "ευχαριστιέμαι" to "ευχαριστήθηκα",
+    "αγαπιέμαι" to "αγαπήθηκα",
 )
 
 private val futureBaseGamma = mapOf(
@@ -288,7 +372,7 @@ private fun String.endsWithAny(vararg suffix: String): Boolean {
 }
 
 enum class GreekVerbGroup {
-    A, B1, B2, G1, G2, EX
+    A, B1, B2, G1, G2, G4, EX
 }
 
 data class GreekVerb(
@@ -306,6 +390,7 @@ data class GreekVerb(
             word.endsWithStressed("ώ") -> GreekVerbGroup.B2
             word.endsWith("ω") -> GreekVerbGroup.A
             word.endsWith("ομαι") -> GreekVerbGroup.G1
+            word.endsWith("ούμαι") -> GreekVerbGroup.G4
             word.endsWith("μαι") && word.getOrNull(word.length - 4) in greekStressedVowels -> GreekVerbGroup.G2
             else -> error("Unknown word form: '$word'")
         }
@@ -318,6 +403,7 @@ data class GreekVerb(
             GreekVerbGroup.B2 -> b2Forms(word)
             GreekVerbGroup.G1 -> g1Forms(word)
             GreekVerbGroup.G2 -> g2Forms(word)
+            GreekVerbGroup.G4 -> g4Forms(word)
             GreekVerbGroup.EX -> {
                 knownExceptions[word]
                     ?.map { listOf(it) }
@@ -360,6 +446,7 @@ data class GreekVerb(
                 val stem = word.dropLast(4)
                 stem + "ηθώ"
             }
+            GreekVerbGroup.G4 -> null // TODO no rule for now, use explicit list
             GreekVerbGroup.EX -> null
         }
     }
@@ -500,6 +587,17 @@ data class GreekVerb(
                 listOf(stem.dropLast(1) + "όμαστε"),
                 listOf(stem + "στε"),
                 listOf(stem.dropLast(1) + "ούνται")
+            )
+        }
+
+        private fun g4Forms(base: String) = base.dropLast(5).let { stem ->
+            listOf(
+                listOf(stem + "ούμαι"),
+                listOf(stem + "είσαι"),
+                listOf(stem + "είται"),
+                listOf(stem + "ούμαστε"),
+                listOf(stem + "είστε"),
+                listOf(stem + "ούνται")
             )
         }
     }

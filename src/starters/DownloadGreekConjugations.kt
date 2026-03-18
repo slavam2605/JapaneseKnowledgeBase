@@ -96,7 +96,7 @@ private fun fixWordString(word: String): String {
 }
 
 private fun getAllAnkiVerbs(): List<String> {
-    val excludeList = setOf("εδώ", "γύρω", "απέξω")
+    val excludeList = setOf("εδώ", "γύρω", "απέξω", "είμαι")
     val b1VerbsPattern = "([^,]*)άω, *\\1ώ".toRegex()
     val b1TypoPattern = "([^,]*), *\\1".toRegex()
     val egoPattern = "\\(εγώ\\) (.*)".toRegex()

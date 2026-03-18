@@ -87,7 +87,7 @@ fun main() {
     // Fact: future simple is always A group, apart from some exceptions
     // Fact: past simple is always the same, without exceptions (but not always formed from future simple)
 
-    val categories = Array<MutableList<GreekVerb>>(6) { mutableListOf() }
+    val categories = Array<MutableList<GreekVerb>>(7) { mutableListOf() }
     words.forEach { word ->
         categories[word.guessGroup().ordinal].add(word)
     }
