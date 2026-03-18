@@ -67,12 +67,18 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
+# macOS-specific files
+.DS_Store
+
 # Huge resource files
 resources/JMdict
-resources/word_list*
 resources/enamdict
 resources/kanjivg.xml
 resources/common_words.txt
+
+# Word lists are packed to ZIP, ignore unpacked files but allow ZIP versions
+resources/word_list*
+!resources/word_list*.zip
 
 # NHK news are packed to ZIP, ignore unpacked files
 resources/nhk-easy-news
