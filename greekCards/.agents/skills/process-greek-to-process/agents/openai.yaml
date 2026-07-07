@@ -1,0 +1,4 @@
+interface:
+  display_name: "Process Greek to_process"
+  short_description: "Process Greek Anki imports safely"
+  default_prompt: "Use $process-greek-to-process to process the Greek Anki to_process deck."
