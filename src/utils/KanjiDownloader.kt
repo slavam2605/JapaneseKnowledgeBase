@@ -27,7 +27,7 @@ fun downloadKanjiInfo(file: File, vararg kanjiToDownload: Char) {
             continue
         }
 
-        val document = getKanjiInfoPage(kanjiToDownload.first()) ?: run {
+        val document = getKanjiInfoPage(kanji) ?: run {
             System.err.println("Failed to download: $kanji")
             continue
         }
