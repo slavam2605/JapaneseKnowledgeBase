@@ -75,6 +75,8 @@ resources/JMdict
 resources/enamdict
 resources/kanjivg.xml
 resources/common_words.txt
+resources/kanjidic2.xml
+resources/kanjidic2.xml.gz
 
 # Word lists are packed to ZIP, ignore unpacked files but allow ZIP versions
 resources/word_list*
