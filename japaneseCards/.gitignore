@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+data/anki_index.sqlite3
+data/anki_index.sqlite3-*
+data/removal_candidates.json
+data/removal_candidates_review.md
