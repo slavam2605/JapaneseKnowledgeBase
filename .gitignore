@@ -85,3 +85,14 @@ resources/word_list*
 # NHK news are packed to ZIP, ignore unpacked files
 resources/nhk-easy-news
 resources/nhk-hard-news
+
+# Japanese & Greek LLM Anki
+.idea/dataSources.xml
+.idea/db-forest-config.xml
+japaneseCards/background/
+japaneseCards/data/answers.md
+japaneseCards/data/grammar.md
+japaneseCards/data/inbox.md
+japaneseCards/data/kanji.md
+japaneseCards/data/words.md
+japaneseCards/logs/
