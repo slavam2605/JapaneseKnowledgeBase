@@ -7,8 +7,7 @@ description: Process Greek Anki cards imported from Quizlet in the `to_process` 
 
 ## Required preflight
 
-- Read `../README.md` relative to this skill folder, or `README.md` in the
-  current project root if invoked from there.
+- Read `greekCards/README.md` from the repository root.
 - Treat the README section `Чеклист обработки to_process` as the source of
   truth. Do not start editing Anki until the checklist has been read.
 - Use AnkiConnect for Anki work. Start with read-only actions such as

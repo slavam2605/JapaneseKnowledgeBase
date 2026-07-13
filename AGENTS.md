@@ -28,6 +28,18 @@ Useful targeted tasks:
 - `bash ./gradlew downloadWords`
 - `bash ./gradlew processWords`
 
+## Language Card Workflows
+
+- Reusable agent workflows live in `.agents/skills/`. The entries under `.claude/skills/` are
+  symlinks for Claude Code compatibility; do not maintain separate copies.
+- For any task under `japaneseCards/`, first read `japaneseCards/AGENTS.md` and
+  `japaneseCards/README.md`. Japanese Anki safety and content rules live under
+  `japaneseCards/knowledge/` and must not be inferred from the Kotlin tooling in `src/`.
+- For Greek card work, first read `greekCards/README.md` and use the
+  `process-greek-to-process` skill when its description matches the task.
+- Keep Japanese and Greek card rules separate. Do not apply conventions from one card project to
+  the other unless a file explicitly says so.
+
 ## Repo-Specific Guidance
 
 - Keep starter entry points in `src/starters/` thin; prefer reusable logic in the domain packages
