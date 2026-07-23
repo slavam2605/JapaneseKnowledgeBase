@@ -221,12 +221,19 @@ def extract_front_terms(front_clean: str) -> list[str]:
     return terms
 
 
+def remove_ne_clarifications(text: str) -> str:
+    """Remove card-level `(не …)` disambiguation notes from embedding input."""
+    return re.sub(r"\s*\(\s*не\b[^)]*\)", "", text, flags=re.IGNORECASE).strip()
+
+
 def build_embedding_text(front_clean: str, back_clean: str) -> str:
     parts = []
-    if front_clean:
-        parts.append(f"Greek vocabulary item: {front_clean}")
-    if back_clean:
-        meaning = re.sub(r"\s*\n\s*", "; ", back_clean)
+    embedding_front = remove_ne_clarifications(front_clean)
+    embedding_back = remove_ne_clarifications(back_clean)
+    if embedding_front:
+        parts.append(f"Greek vocabulary item: {embedding_front}")
+    if embedding_back:
+        meaning = re.sub(r"\s*\n\s*", "; ", embedding_back)
         parts.append(f"Meaning: {meaning}")
     return "\n".join(parts)
 

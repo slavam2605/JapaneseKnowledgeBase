@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Greek reciprocal ne"
+  short_description: "Safely add reverse Greek ne links"
+  default_prompt: "Use $sync-greek-reciprocal-ne to synchronize missing reverse (не …) links from the reviewed to_process deck."

@@ -5,9 +5,11 @@ from __future__ import annotations
 
 import argparse
 import heapq
+import json
 import sqlite3
 import sys
 from pathlib import Path
+from typing import Any
 
 from embedding_utils import (
     DEFAULT_BACKEND,
@@ -71,6 +73,13 @@ def parse_args() -> argparse.Namespace:
         help="Optional embedding dimensions. Use the same value used by build_embeddings.py.",
     )
     parser.add_argument("--top", type=int, default=10, help="Number of matches to show. Default: 10")
+    parser.add_argument(
+        "--format",
+        dest="output_format",
+        choices=["text", "json", "markdown"],
+        default="text",
+        help="Output format. Default: text.",
+    )
     parser.add_argument(
         "--include-self",
         action="store_true",
@@ -139,6 +148,22 @@ def fetch_note_embedding_text(
     if row is None:
         raise EmbeddingError(f"Note {note_id} was not found in deck {deck!r}.")
     return str(row["embedding_text"])
+
+
+def fetch_note_summary(connection: sqlite3.Connection, deck: str, note_id: int) -> sqlite3.Row:
+    row = connection.execute(
+        """
+        SELECT note_id, front_clean, back_clean
+        FROM anki_notes
+        WHERE deck_name = ?
+          AND note_id = ?
+          AND is_present = 1
+        """,
+        (deck, note_id),
+    ).fetchone()
+    if row is None:
+        raise EmbeddingError(f"Note {note_id} was not found in deck {deck!r}.")
+    return row
 
 
 def build_text_query(text: str) -> str:
@@ -225,6 +250,103 @@ def search(
     return sorted(matches, key=lambda item: item[0], reverse=True)
 
 
+def build_search_result(
+    args: argparse.Namespace,
+    model: str,
+    model_key: str,
+    dim_key: str,
+    query_deck: str,
+    query_text: str,
+    query_note: sqlite3.Row | None,
+    matches: list[tuple[float, int, sqlite3.Row]],
+) -> dict[str, Any]:
+    if query_note is None:
+        query: dict[str, Any] = {"type": "text", "text": args.text, "embedding_text": query_text}
+    else:
+        query = {
+            "type": "note",
+            "deck": query_deck,
+            "note_id": int(query_note["note_id"]),
+            "front": str(query_note["front_clean"]),
+            "back": str(query_note["back_clean"]),
+            "embedding_text": query_text,
+        }
+
+    candidates = [
+        {
+            "rank": index,
+            "score": score,
+            "deck": str(row["deck_name"]),
+            "note_id": int(row["note_id"]),
+            "front": str(row["front_clean"]),
+            "back": str(row["back_clean"]),
+        }
+        for index, (score, _note_id, row) in enumerate(matches, start=1)
+    ]
+    return {
+        "search_deck": args.deck,
+        "backend": args.backend,
+        "model": model,
+        "storage_model_key": model_key,
+        "dimensions": dim_key,
+        "query": query,
+        "candidates": candidates,
+    }
+
+
+def markdown_cell(text: str) -> str:
+    return text.replace("|", "\\|").replace("\n", "<br>")
+
+
+def print_markdown_result(result: dict[str, Any]) -> None:
+    query = result["query"]
+    print("# Similar Greek cards")
+    print()
+    print(f"- Search deck: `{result['search_deck']}`")
+    print(f"- Backend: `{result['backend']}`")
+    print(f"- Model: `{result['model']}`")
+    print()
+    print("## Query")
+    print()
+    if query["type"] == "note":
+        print(f"- Note ID: `{query['note_id']}`")
+        print(f"- Query deck: `{query['deck']}`")
+        print(f"- Front: {markdown_cell(str(query['front']))}")
+        print(f"- Back: {markdown_cell(str(query['back']))}")
+    else:
+        print(f"- Text: {markdown_cell(str(query['text']))}")
+    print()
+    print("## Candidates")
+    print()
+    print("| Rank | Score | Note ID | FrontText | BackText |")
+    print("| ---: | ---: | ---: | --- | --- |")
+    for candidate in result["candidates"]:
+        print(
+            "| {rank} | {score:.4f} | {note_id} | {front} | {back} |".format(
+                rank=candidate["rank"],
+                score=candidate["score"],
+                note_id=candidate["note_id"],
+                front=markdown_cell(str(candidate["front"])),
+                back=markdown_cell(str(candidate["back"])),
+            )
+        )
+
+
+def print_text_result(result: dict[str, Any]) -> None:
+    print(f"Deck: {result['search_deck']}")
+    print(f"Backend: {result['backend']}")
+    print(f"Model: {result['model']}")
+    print(f"Storage model key: {result['storage_model_key']}")
+    print(f"Dimensions: {result['dimensions']}")
+    print()
+    for candidate in result["candidates"]:
+        front = compact_text(str(candidate["front"]), 48)
+        back = compact_text(str(candidate["back"]), 90)
+        print(f"{candidate['rank']:>2}. {candidate['score']:.4f}  {candidate['note_id']}  {front}")
+        if back:
+            print(f"    {back}")
+
+
 def main() -> int:
     args = parse_args()
     if args.top <= 0:
@@ -247,7 +369,10 @@ def main() -> int:
     try:
         with connect_database(args.db) as connection:
             initialize_embedding_tables(connection)
+            query_note: sqlite3.Row | None = None
             if args.note_id is not None:
+                query_note = fetch_note_summary(connection, query_deck, args.note_id)
+                query_text = fetch_note_embedding_text(connection, query_deck, args.note_id)
                 stored_embedding = fetch_stored_query_embedding(
                     connection,
                     query_deck,
@@ -256,7 +381,6 @@ def main() -> int:
                     dim_key,
                 )
                 if stored_embedding is None:
-                    query_text = fetch_note_embedding_text(connection, query_deck, args.note_id)
                     query_vector, query_norm = embed_query_text(
                         query_text,
                         args.backend,
@@ -299,18 +423,22 @@ def main() -> int:
         print(f"error: {error}", file=sys.stderr)
         return 1
 
-    print(f"Deck: {args.deck}")
-    print(f"Backend: {args.backend}")
-    print(f"Model: {model}")
-    print(f"Storage model key: {model_key}")
-    print(f"Dimensions: {dim_key}")
-    print()
-    for index, (score, _note_id, row) in enumerate(matches, start=1):
-        front = compact_text(str(row["front_clean"]), 48)
-        back = compact_text(str(row["back_clean"]), 90)
-        print(f"{index:>2}. {score:.4f}  {row['note_id']}  {front}")
-        if back:
-            print(f"    {back}")
+    result = build_search_result(
+        args,
+        model,
+        model_key,
+        dim_key,
+        query_deck,
+        query_text,
+        query_note,
+        matches,
+    )
+    if args.output_format == "json":
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    elif args.output_format == "markdown":
+        print_markdown_result(result)
+    else:
+        print_text_result(result)
 
     return 0
 
