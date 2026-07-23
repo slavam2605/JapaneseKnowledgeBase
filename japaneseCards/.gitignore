@@ -4,3 +4,5 @@ data/anki_index.sqlite3
 data/anki_index.sqlite3-*
 data/removal_candidates.json
 data/removal_candidates_review.md
+data/kanji_word_coverage.json
+data/kanji_word_coverage_review.md

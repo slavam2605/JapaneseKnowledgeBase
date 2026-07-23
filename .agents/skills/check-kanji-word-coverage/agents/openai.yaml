@@ -1,0 +1,4 @@
+interface:
+  display_name: "Покрытие кандзи словами"
+  short_description: "Проверяет покрытие кандзи колодой слов"
+  default_prompt: "Use $check-kanji-word-coverage to find reviewed kanji cards not covered by the words deck."

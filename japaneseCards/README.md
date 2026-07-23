@@ -60,6 +60,7 @@ Python-инструменты, вызываются по пути `python3 japan
 | `fetch_remarks.py` | выгрузка заметок с непустым `Remarks` (для `process-remarks`) |
 | `export_anki_notes.py`, `build_embeddings.py`, `search_similar.py` | эмбеддинг-индекс колод (поиск/дедуп); см. [tools/EMBEDDINGS.md](tools/EMBEDDINGS.md) |
 | `dedup_scan.py` | read-only скан дублей архив↔новое → `data/removal_candidates{.json,_review.md}` (для `dedup-cards`) |
+| `check_kanji_word_coverage.py` | read-only сверка карточек `新日本語::Чтение кандзи` с тегом `to_review` с `新日本語::Слова`: точные покрытия проверяет по форме, а эмбеддингами создаёт короткую очередь LLM-проверки → `data/kanji_word_coverage{.json,_review.md}` |
 | `jisho_levels.py` | устаревший онлайн-фолбэк (jisho.org); обычно не нужен |
 
 ## `logs/` — журналы операций, append-only
