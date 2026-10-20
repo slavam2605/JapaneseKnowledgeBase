@@ -122,6 +122,45 @@ python3 scripts/build_embeddings.py --deck "Πες το ελληνικά" --ca-b
 API вернет ошибку billing/quota. В таком случае можно либо пополнить API-баланс,
 либо добавить отдельный локальный backend для embeddings.
 
+# Частотность слов
+
+Скрипт `scripts/greek_frequency.py` строит локальный частотный словарь лемм. Он нужен, чтобы
+оценивать, насколько частотны слова колоды. В Anki скрипт ничего не меняет: он читает
+`data/greek_cards.sqlite3` после экспорта.
+
+Источники (около 300 МБ) скачиваются в `data/frequency/sources/`. Каталог `data/frequency/`
+в git не попадает.
+
+- SUBTLEX-GR — частоты словоформ по субтитрам, 27.8 млн словоупотреблений, разговорный язык.
+- GreekLex 2 — частоты лемм письменного корпуса HNC: пресса и книги.
+- Греческий словарь kaikki.org (английский Wiktionary) — таблицы склонения и спряжения. По ним
+  словоформы SUBTLEX сворачиваются в леммы: три рода прилагательного, падежи, времена глагола.
+
+```bash
+.venv/bin/python -m pip install -r requirements-frequency.txt
+.venv/bin/python scripts/greek_frequency.py download
+.venv/bin/python scripts/greek_frequency.py build
+```
+
+Быстрый запрос по слову или целой лицевой стороне карточки:
+
+```bash
+.venv/bin/python scripts/greek_frequency.py lookup "μεγάλος, μεγάλη, μεγάλο" "οι σπουδές" "έχω αγωνία"
+```
+
+Отчёт по колоде с гистограммами и CSV по каждой карточке. Перед запуском нужно экспортировать
+колоду:
+
+```bash
+python3 scripts/export_anki_notes.py --deck "Πες το ελληνικά"
+.venv/bin/python scripts/greek_frequency.py report --deck "Πες το ελληνικά"
+```
+
+Отчёт пишется в `data/frequency/report/report.md`. Метрика — Zipf, десятичный логарифм частоты
+на миллиард слов: 3 ≈ 1 раз на миллион, 5 ≈ 100 раз на миллион. Комбинированный Zipf —
+среднее SUBTLEX-GR и GreekLex 2. Если слова нет в GreekLex, берётся только SUBTLEX-GR. Для
+фраз берётся частота самого редкого слова.
+
 # Правила карточек Anki для греческого
 
 Эти правила выведены по примерам из колод `to_process` и `Πες το ελληνικά`.
