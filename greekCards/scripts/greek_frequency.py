@@ -409,8 +409,17 @@ GUESSED_VERB_PARADIGMS = (
 ADJECTIVE_HEADWORD_PATTERN = re.compile(r"(ος|ός|μένη|μένο)$")
 DICTIONARY_VERB_PATTERN = re.compile(r"(ω|ώ|ομαι|άμαι|ιέμαι|ούμαι)$")
 VERB_ENDING_PATTERN = re.compile(r"(ω|ώ|ομαι|άμαι|ιέμαι|ει|εί|εται)$")
-GUESSED_ADJECTIVE_ENDINGS = ("οσ", "ου", "ο", "ε", "οι", "ων", "ουσ", "η", "ησ", "εσ", "α")
+GUESSED_ADJECTIVE_ENDINGS = ("οσ", "ου", "ο", "ε", "οι", "ων", "ουσ", "η", "ησ", "εσ", "α", "ασ")
 GUESSED_ADJECTIVE_PATTERN = re.compile(r"(οσ|η|ο|α)$")
+# Colloquial -ης/-α/-ικο adjectives (ζηλιάρης, τεμπέλης, μικρούλης): the plain -ικο neuter has no -ος form.
+# Only the masculine triggers it: a bare -ικο could also be the neuter of a regular -ικος adjective
+# (κορεάτικο), and the -ης paradigm would then pull in the noun Κορεάτης.
+GUESSED_IS_ADJECTIVE_PATTERN = re.compile(r"(ησ|ηδεσ)$")
+GUESSED_IS_ADJECTIVE_ENDINGS = (
+    "ησ", "η", "ηδεσ", "ηδων",  # masculine
+    "α", "ασ", "εσ",  # feminine
+    "ικο", "ικου", "ικα", "ικων",  # neuter
+)
 MIN_GUESSED_STEM = 4
 
 
@@ -918,6 +927,10 @@ def guess_forms(token: str, shape: str) -> list[str]:
     """Accent-free candidate forms for a word missing from Wiktionary, by its ending."""
     plain = strip_accents(token)
     if shape == "adj":
+        match = GUESSED_IS_ADJECTIVE_PATTERN.search(plain)
+        if match and len(plain) - len(match.group(1)) >= MIN_GUESSED_STEM:
+            stem = plain[: match.start()]
+            return [stem + ending for ending in GUESSED_IS_ADJECTIVE_ENDINGS]
         match = GUESSED_ADJECTIVE_PATTERN.search(plain)
         if match and len(plain) - len(match.group(1)) >= MIN_GUESSED_STEM:
             stem = plain[: match.start()]
