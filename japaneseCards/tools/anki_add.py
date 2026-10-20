@@ -18,6 +18,9 @@
       "model": "AiGeneratedJapaneseGrammar",  # note type (обязательно)
       "tags":  ["ai_generated", "ai_generated::to_review"],  # опц., это и есть дефолт
       "suspend": true,                          # опц., по умолчанию true (заморозить)
+      "counter_reading_reviews": {              # только после обсуждения неоднозначности
+        "七年": {"kana": "ななねん", "reason": "пользователь выбрал частотный вариант"}
+      },
       "notes": [
         { "Expressions": "...", "Grammar": "...", "Meaning": "..." },   # только непустые поля
         ...
@@ -40,13 +43,136 @@ import json
 import re
 import sys
 import urllib.request
+from pathlib import Path
+
+import counter_readings
 
 ANKI_URL = "http://localhost:8765"
 DEFAULT_TAGS = ["ai_generated", "ai_generated::to_review"]
+KANJI_MODEL = "AiGeneratedJapaneseKanji"
+COUNTER_CATALOG_PATH = Path(__file__).with_name("counter_reading_catalog.json")
 
 # Остаточная фуригана: ` 漢字[かな]` после рендера должна стать <ruby>. Если в готовом
 # HTML остался литерал `[かな]` (кана в квадратных скобках) — фильтр фуриганы не сработал.
 RESIDUAL_FURIGANA = re.compile(r"\[[ぁ-ゖァ-ヺー]+\]")
+
+
+def load_counter_catalog():
+    with COUNTER_CATALOG_PATH.open(encoding="utf-8") as source:
+        return json.load(source)
+
+
+def split_numeric_expression(surface, numeric_characters):
+    """Return (numeric prefix, remainder), or None for an ordinary expression."""
+    index = 0
+    while index < len(surface) and surface[index] in numeric_characters:
+        index += 1
+    if index == 0 or index == len(surface):
+        return None
+    return surface[:index], surface[index:]
+
+
+def is_counter_expression(surface, lookup_result, catalog):
+    """Recognize counters through UniDic POS, with a small lexicalized exception list."""
+    split = split_numeric_expression(surface, catalog["numeric_characters"])
+    if split is None:
+        return False
+
+    _, suffix = split
+    if suffix in catalog["counter_suffix_exceptions"]:
+        return True
+
+    unidic = lookup_result.get("sources", {}).get("unidic") or {}
+    return any(
+        "助数詞" in node.get("pos", "")
+        for node in unidic.get("nodes", [])
+    )
+
+
+def normalized_reading_key(reading, phoneme_key=counter_readings.reading_phonemes):
+    reading = counter_readings.katakana_to_hiragana(reading.strip())
+    return phoneme_key(reading)
+
+
+def validate_counter_readings(
+    notes,
+    reviews=None,
+    lookup=counter_readings.lookup,
+    phoneme_key=counter_readings.reading_phonemes,
+    catalog=None,
+):
+    """Validate counter cards without touching Anki; return checked surface/reading pairs.
+
+    ``reviews`` is an explicit audit marker for cases already discussed with the user:
+    ``{surface: {"kana": ..., "reason": ...}}``. It never bypasses missing evidence or a
+    reading absent from the plausible candidates.
+    """
+    reviews = reviews or {}
+    catalog = catalog or load_counter_catalog()
+    checked = []
+
+    for index, note in enumerate(notes):
+        if note.get("modelName") != KANJI_MODEL:
+            continue
+        fields = note.get("fields", {})
+        surface = fields.get("Kanji", "").strip()
+        kana = fields.get("Kana", "").strip()
+        if split_numeric_expression(surface, catalog["numeric_characters"]) is None:
+            continue
+
+        result = lookup(surface)
+        if not result.get("complete"):
+            errors = result.get("errors") or {"lookup": "unknown incomplete result"}
+            detail = "; ".join(f"{source}: {error}" for source, error in errors.items())
+            raise ValueError(
+                f"Счётное чтение {surface!r} нельзя проверить полностью: {detail}. "
+                "Используйте japaneseCards/.venv/bin/python и собранные локальные индексы."
+            )
+        counter_expression = is_counter_expression(surface, result, catalog)
+
+        plausible = [candidate for candidate in result["candidates"] if candidate["plausible"]]
+        plausible_keys = {
+            normalized_reading_key(spelling, phoneme_key)
+            for candidate in plausible
+            for spelling in candidate.get("spellings", [candidate["reading"]])
+        }
+        supplied_key = normalized_reading_key(kana, phoneme_key)
+        if supplied_key not in plausible_keys:
+            readings = ", ".join(candidate["reading"] for candidate in plausible) or "нет"
+            raise ValueError(
+                f"Неверное или неподтверждённое Kana для {surface!r} (нота {index}): "
+                f"{kana!r}; допустимые подтверждённые кандидаты: {readings}."
+            )
+
+        if result.get("needs_review"):
+            review = reviews.get(surface)
+            if not isinstance(review, dict):
+                raise ValueError(
+                    f"Чтение {surface!r} неоднозначно и требует обсуждения с пользователем. "
+                    "После решения добавьте counter_reading_reviews с kana и reason."
+                )
+            reviewed_kana = str(review.get("kana", "")).strip()
+            reason = str(review.get("reason", "")).strip()
+            if not reviewed_kana or not reason:
+                raise ValueError(
+                    f"counter_reading_reviews[{surface!r}] должен содержать непустые kana и reason."
+                )
+            if normalized_reading_key(reviewed_kana, phoneme_key) != supplied_key:
+                raise ValueError(
+                    f"Согласованное kana для {surface!r} ({reviewed_kana!r}) "
+                    f"не совпадает с полем Kana ({kana!r})."
+                )
+
+        checked.append(
+            {
+                "surface": surface,
+                "kana": kana,
+                "counter": counter_expression,
+                "reviewed": result["needs_review"],
+            }
+        )
+
+    return checked
 
 
 def call(action, **params):
@@ -142,10 +268,19 @@ def main():
     try:
         spec = load_spec(paths[0])
         notes = build_notes(spec)
+        counter_checks = validate_counter_readings(
+            notes, reviews=spec.get("counter_reading_reviews")
+        )
     except (ValueError, KeyError, OSError, json.JSONDecodeError) as e:
         sys.stderr.write(f"Ошибка входных данных: {e}\n")
         return 2
     print(f"Партия: {len(notes)} нот → {notes[0]['deckName']} / {notes[0]['modelName']}")
+    if counter_checks:
+        reviewed = sum(item["reviewed"] for item in counter_checks)
+        print(
+            f"Проверка числовых/счётных чтений: {len(counter_checks)} OK "
+            f"(после обсуждения: {reviewed})"
+        )
 
     if not check_can_add(notes):
         sys.stderr.write("canAddNotes не пройден — ничего не создано.\n")

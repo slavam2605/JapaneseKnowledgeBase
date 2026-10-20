@@ -1,0 +1,12 @@
+{
+  "numeric_characters": "〇零一二三四五六七八九十百千万億兆何幾",
+  "counter_suffix_exceptions": [
+    "人",
+    "杯",
+    "曲",
+    "軒",
+    "足",
+    "組",
+    "つ"
+  ]
+}
