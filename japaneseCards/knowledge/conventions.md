@@ -107,6 +107,11 @@ python3 japaneseCards/tools/anki_add.py batch.json            # canAdd → add �
 python3 japaneseCards/tools/anki_add.py batch.json --dry-run   # только canAdd (превью, без записи)
 ```
 
+Для партий со счётными выражениями запускать скрипт из `japaneseCards/.venv/bin/python`: перед
+`canAddNotes` он делает обязательный оффлайн-preflight по BCCWJ / UniDic / Open JTalk / JMdict.
+Формат фиксации уже обсуждённых неоднозначностей и полный процесс — в `kanji-cards.md`, раздел
+«Счётчики: только полным рядом». Ручной фолбэк ниже не разрешает обходить этот preflight.
+
 Формат `batch.json` (поля — только непустые, остальные дополняются пустыми автоматически):
 ```json
 { "deck": "新日本語::Грамматика", "model": "AiGeneratedJapaneseGrammar",
@@ -197,3 +202,7 @@ python3 japaneseCards/tools/dict_build_index.py
 Ресурсы (`JMdict`, `word_list_2.txt`, `kanjidic2.xml`) уже в общей `resources/` репозитория; их же
 читает Kotlin-код. `jisho_levels.py` (онлайн-запрос к jisho.org) — устаревший фолбэк, в обычном
 процессе использовать локальный `dict_lookup.py`.
+
+Для полных числовых и счётных выражений `dict_lookup.py --kanji` недостаточен: он знает чтения
+отдельных знаков, но не сокуон, рэндаку, варианты числительных и частотность полной формы. Использовать
+`tools/counter_readings.py` по правилам [kanji-cards.md](kanji-cards.md).

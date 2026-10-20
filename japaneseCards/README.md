@@ -56,7 +56,9 @@ Python-инструменты, вызываются по пути `python3 japan
 |---|---|
 | `dict_lookup.py` | оффлайн-лукап слов/кандзи (якорные факты против галлюцинаций) |
 | `dict_build_index.py` | разовая сборка `dict_index.sqlite` из `resources/` |
-| `anki_add.py` | создание карточек через AnkiConnect (canAdd → add → suspend → verify) |
+| `counter_readings.py` | доказательная проверка полных форм счётчиков по BCCWJ / UniDic / Open JTalk / JMdict; неоднозначность не разрешает автоматически |
+| `counter_readings_build_index.py` | разовая сборка локального SQLite-индекса частот BCCWJ |
+| `anki_add.py` | создание карточек через AnkiConnect (preflight чтений счётчиков → canAdd → add → suspend → verify) |
 | `fetch_remarks.py` | выгрузка заметок с непустым `Remarks` (для `process-remarks`) |
 | `export_anki_notes.py`, `build_embeddings.py`, `search_similar.py` | эмбеддинг-индекс колод (поиск/дедуп); см. [tools/EMBEDDINGS.md](tools/EMBEDDINGS.md) |
 | `dedup_scan.py` | read-only скан дублей архив↔новое → `data/removal_candidates{.json,_review.md}` (для `dedup-cards`) |
