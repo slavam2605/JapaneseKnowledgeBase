@@ -78,6 +78,11 @@ resources/common_words.txt
 resources/kanjidic2.xml
 resources/kanjidic2.xml.gz
 
+# Counter-reading validation datasets (downloaded locally; keep only metadata in Git)
+resources/counter_readings/raw/
+resources/counter_readings/unidic-cwj-202512/
+resources/counter_readings/open_jtalk_dic_utf_8-1.11/
+
 # Word lists are packed to ZIP, ignore unpacked files but allow ZIP versions
 resources/word_list*
 !resources/word_list*.zip

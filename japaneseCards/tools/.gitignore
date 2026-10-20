@@ -1,3 +1,4 @@
 # Производные артефакты — пересобираются из resources/ через dict_build_index.py
 dict_index.sqlite
+counter_readings_index.sqlite
 __pycache__/
