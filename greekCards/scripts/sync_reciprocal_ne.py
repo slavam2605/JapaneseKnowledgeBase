@@ -26,8 +26,9 @@ NE_PATTERN = re.compile(r"\(\s*не\b\s*([^)]+)\)", re.IGNORECASE)
 NE_SEPARATOR = re.compile(r"\s*,\s*(?:не\s+)?", re.IGNORECASE)
 GREEK_TOKEN_PATTERN = re.compile(r"[α-ω]+")
 ACCENTED_GREEK_TOKEN_PATTERN = re.compile(r"[\u0370-\u03ff\u1f00-\u1fff]+")
+# Final sigma is normalized to σ before article stripping, so articles use σ too.
 GREEK_ARTICLES = frozenset(
-    {"ο", "η", "το", "οι", "τα", "τον", "την", "τους", "τις", "του", "της", "των"}
+    {"ο", "η", "το", "οι", "τα", "τον", "την", "τουσ", "τισ", "του", "τησ", "των"}
 )
 
 
@@ -100,6 +101,11 @@ def variants(text: str) -> set[str]:
     return {variant for variant in {value, without_article(value)} if variant}
 
 
+def accented_variants(text: str) -> set[str]:
+    value = accented_greek_variant(text)
+    return {variant for variant in {value, without_article(value)} if variant}
+
+
 def front_terms(row: sqlite3.Row) -> list[str]:
     terms = [str(row["front_clean"])]
     try:
@@ -138,8 +144,7 @@ def build_target_indexes(
     loose_index: dict[str, set[int]] = defaultdict(set)
     for row in rows:
         for term in front_terms(row):
-            accented = accented_greek_variant(term)
-            if accented:
+            for accented in accented_variants(term):
                 accented_index[accented].add(int(row["note_id"]))
             exact = greek_variant(term)
             if exact:
@@ -155,9 +160,11 @@ def resolve_target_note_ids(
     exact_index: dict[str, set[int]],
     loose_index: dict[str, set[int]],
 ) -> list[int]:
-    accented = accented_greek_variant(target)
-    if accented and accented_index.get(accented):
-        return sorted(accented_index[accented])
+    accented_ids = {
+        note_id for variant in accented_variants(target) for note_id in accented_index.get(variant, set())
+    }
+    if accented_ids:
+        return sorted(accented_ids)
     exact = greek_variant(target)
     if exact and exact_index.get(exact):
         return sorted(exact_index[exact])

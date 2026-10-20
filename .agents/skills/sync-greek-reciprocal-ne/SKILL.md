@@ -19,6 +19,11 @@ Read `greekCards/README.md` first. Its section “Синхронизация о�
   separately and wait for explicit approval before removing anything.
 - Do not use embedding similarity to infer a relation. Resolve targets from
   the written `(не …)` terms only; skip not-found or ambiguous targets.
+- An exact match keeps accents but may omit a leading Greek article on either
+  side: `(не ζέστη)` exactly matches the card `η ζέστη`. A unique exact match
+  wins over accent-insensitive candidates such as `η ζεστή` from
+  `ο ζεστός, η ζεστή, το ζεστό`, so it is not ambiguous. Fall back to
+  accent-insensitive matching only when no exact match exists.
 - Preserve every existing primary-card marker. Merge a new term into the
   existing list, for example `(не απουσιάζω)` plus `φεύγω` becomes
   `(не απουσιάζω, φεύγω)`.
