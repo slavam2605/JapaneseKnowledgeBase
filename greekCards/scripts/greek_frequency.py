@@ -1435,18 +1435,39 @@ def draw_charts(
         by_quarter[quarter_label(card.created)].append(card.result.zipf)
     quarters = sorted(q for q, vals in by_quarter.items() if len(vals) >= 20)
     if len(quarters) >= 2:
-        figure, axes = plt.subplots(figsize=(10, 4.4))
+        figure, axes = plt.subplots(figsize=(10, 4.8))
         style_axes(axes)
         medians = [statistics.median(by_quarter[q]) for q in quarters]
-        axes.plot(range(len(quarters)), medians, color=SERIES_1, linewidth=2, marker="o", markersize=6,
-                  markeredgecolor=SURFACE, markeredgewidth=2, solid_capstyle="round")
-        axes.set_xticks(range(len(quarters)), quarters, rotation=45, ha="right")
+        counts = [len(by_quarter[q]) for q in quarters]
+        positions = list(range(len(quarters)))
+        # Faint bars behind the line show how many lexemes each quarter added. They are scaled to the
+        # lower part of the Zipf axis and labelled directly, so the chart keeps a single axis.
+        low, high = min(medians) - 0.35, max(medians) + 0.25
+        bar_top = low + (high - low) * 0.55
+        heights = [low + (bar_top - low) * count / max(counts) for count in counts]
+        axes.bar(positions, [h - low for h in heights], bottom=low, width=0.62, color=SERIES_1, alpha=0.12,
+                 zorder=1)
+        for position, height, count in zip(positions, heights, counts):
+            axes.text(position, height + 0.012, f"{count}", ha="center", va="bottom", fontsize=8,
+                      color=TEXT_SECONDARY, zorder=2)
+        axes.plot(positions, medians, color=SERIES_1, linewidth=2, marker="o", markersize=6,
+                  markeredgecolor=SURFACE, markeredgewidth=2, solid_capstyle="round", zorder=3)
+        axes.set_xticks(positions, quarters, rotation=45, ha="right")
+        axes.set_ylim(low, high)
         axes.set_ylabel("медианный Zipf", color=TEXT_SECONDARY, fontsize=9)
-        axes.text(len(quarters) - 1, medians[-1] + 0.04, f"{medians[-1]:.2f}", ha="center", fontsize=9,
-                  color=TEXT_PRIMARY)
+        for position, median in zip(positions, medians):
+            neighbours = [medians[i] for i in (position - 1, position + 1) if 0 <= i < len(medians)]
+            below = all(median < other for other in neighbours)  # a dip: the line rises on both sides
+            if below:  # to the right of the marker, clear of the bar count under it
+                axes.text(position + 0.1, median - 0.01, f"{median:.2f}", ha="left", va="top", fontsize=8,
+                          color=TEXT_PRIMARY, zorder=4)
+            else:
+                axes.text(position, median + 0.035, f"{median:.2f}", ha="center", va="bottom", fontsize=8,
+                          color=TEXT_PRIMARY, zorder=4)
         figure.suptitle("Насколько частотны слова, добавленные в разные кварталы", x=0.06, ha="left",
                         fontsize=13, color=TEXT_PRIMARY)
-        axes.set_title("Медианный Zipf новых карточек-лексем; ниже — значит слова реже", loc="left", fontsize=9,
+        axes.set_title("Линия — медианный Zipf новых карточек-лексем (ниже — слова реже); "
+                       "бледные столбики с числом — сколько лексем добавлено", loc="left", fontsize=9,
                        color=TEXT_SECONDARY)
         figure.tight_layout()
         figure.savefig(out_dir / "timeline.png", dpi=150)
