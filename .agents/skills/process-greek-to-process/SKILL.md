@@ -32,7 +32,19 @@ description: Process Greek Anki cards imported from Quizlet in the `to_process` 
 - Preserve the existing note type and fields.
 - Usually edit only `BackText`; adjust `FrontText` only for clear Greek spelling,
   article, or form issues that the README rules cover.
-- Preserve Quizlet English unless it is clearly wrong.
+- Draft the Russian translation directly from the Greek `FrontText` before
+  consulting Quizlet English. Base it on the Greek lexeme, construction, part
+  of speech, and context; prefer the central intended sense over an exhaustive
+  list of possible dictionary senses.
+- Treat Quizlet English only as a weak directional hint and a later sanity
+  check. It may help select between meanings already supported by the Greek,
+  but it must never introduce a Russian meaning solely because the English
+  gloss is polysemous. For example, English `recall` does not by itself justify
+  adding `вспоминать` to a bare Greek verb.
+- Preserve Quizlet English unless it is clearly wrong, but do not treat its
+  preservation as evidence that every English sense applies to the Greek. If
+  the direct Greek meaning remains uncertain, skip the note instead of
+  translating through English.
 - Add Russian translation and examples according to the README format.
 - Do not touch `Image` if the imported image is suitable.
 - Leave `Add Reverse` as-is by default. Remove it only for longer, complex Greek
@@ -84,6 +96,8 @@ description: Process Greek Anki cards imported from Quizlet in the `to_process` 
   contrast from a shared word or root when the central meanings differ:
   `έχω γερά νεύρα` and `έχω νεύρα` are not a `(не …)` pair. A phrase fragment
   is valid when it is the distinguishing part of a longer expression.
+- When adding a word inside `(не …)`, omit its leading Greek article. Write
+  `(не δυσκολία)`, never `(не η δυσκολία)`.
 - If no candidate clearly qualifies, do not add a `(не …)` note. Preserve an
   existing valid clarification unless the user requests its revision.
 - Never replace an existing `(не …)` list when adding a new target. Merge the
